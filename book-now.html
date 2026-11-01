@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book Now | M&amp;H BOUTIQUE HOTEL</title>
+  <meta name="description" content="Reserve your stay at M&H Boutique Hotel, Diani Beach.">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;700&family=Martel+Sans:wght@200;300;400;600;700&family=Tinos:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="#fff" stroke-width="1.6"/></svg></button>
+  <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="accommodation.html">Accommodation</a>
+      <a href="services-activities.html">Services &amp; Activities</a>
+      <a href="food-drinks.html">Food &amp; Drinks</a>
+      <a href="about-us.html">About Us</a>
+      <a href="book-now.html" class="active" aria-current="page">Book Now</a>
+  </nav>
+</header>
+<main>
+
+<section class="section booking">
+  <h1>Hotel reservation</h1>
+  <form id="booking-form" novalidate>
+    <div class="form-grid">
+      <div class="field"><label for="first_name">First name</label><input id="first_name" name="first_name" autocomplete="given-name" required></div>
+      <div class="field"><label for="last_name">Last name</label><input id="last_name" name="last_name" autocomplete="family-name" required></div>
+      <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="phone">Phone no.</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+      <div class="field"><label for="arrival_date">Arrival - Date</label><input id="arrival_date" name="arrival_date" type="date" required></div>
+      <div class="field time"><label for="arrival_time">Arrival From - Time</label><input id="arrival_time" name="arrival_time" value="13 : 00"></div>
+      <div class="field"><label for="departure_date">Departure - Date</label><input id="departure_date" name="departure_date" type="date" required></div>
+      <div class="field time"><label for="departure_time">Departure Till - Time</label><input id="departure_time" name="departure_time" value="11 : 00"></div>
+    </div>
+    <div class="form-rule"></div>
+    <div class="rooms-grid">
+      <div class="room-opt">
+        <h2>Select your room</h2>
+        <p class="room-name">Studio rooms</p>
+        <label><input type="radio" name="room" value="Studio rooms – $80/Night" required> $80/Night</label>
+        <p class="room-name">One bedroom</p>
+        <label><input type="radio" name="room" value="One bedroom – $95/Night"> $95/Night</label>
+        <p class="room-name">Two bedroom</p>
+        <label><input type="radio" name="room" value="Two bedroom – $125/Night"> $125/Night</label>
+        <p class="room-name">Three bedroom</p>
+        <label><input type="radio" name="room" value="Three bedroom – $155/Night"> $155/Night</label>
+      </div>
+      <div class="field"><label for="nights">Number of nights</label><input id="nights" name="nights" type="number" min="1"></div>
+      <div class="field"><label for="guests">Number of guests</label><input id="guests" name="guests" type="number" min="1"></div>
+    </div>
+    <button class="btn-submit" type="submit">Submit</button>
+    <p class="form-status" id="booking-status" role="status"></p>
+  </form>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="footer-rule"></div>
+  <div class="footer-cols inner">
+    <div>
+      <h4>Location</h4>
+      <p>P.O BOX 633<br>
+we are located in Mombasa, Diani (Kinondo town)<br>
+close to green garden accademy.</p>
+      <a class="maps" href="https://www.google.com/maps/place/M%26H+Boutique+Hotel/@-4.3726463,39.5265662,17z/data=!4m20!1m10!3m9!1s0x18404d8eb2628c39:0x6f411917913b250e!2sM%26H+Boutique+Hotel!5m2!4m1!1i2!8m2!3d-4.3723307!4d39.5253217!16s%2Fg%2F11zbksnlnq!3m8!1s0x18404d8eb2628c39:0x6f411917913b250e!5m2!4m1!1i2!8m2!3d-4.3723307!4d39.5253217!16s%2Fg%2F11zbksnlnq?entry=ttu" target="_blank" rel="noopener">Google maps pin</a>
+      <div class="contacts">
+        <h4>Contacts</h4>
+        <a class="contact-line" href="tel:+254110766432">+254 110766432</a>
+        <a class="contact-line" href="mailto:mandhboutiquehotel@gmail.com">mandhboutiquehotel@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h4>Links</h4>
+      <a href="index.html">Home</a>
+      <a href="accommodation.html">Accommodation</a>
+      <a href="services-activities.html">Services and Activities</a>
+      <a href="food-drinks.html">Food and Drinks</a>
+      <a href="about-us.html">About us</a>
+      <a href="book-now.html">Book Now</a>
+      <a href="gallery.html">Picture gallery</a>
+    </div>
+    <div>
+      <h4>Our social</h4>
+      <!-- TODO: add the hotel's real social media profile links (the Canva site has none yet) -->
+      <div class="socials">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 25 25" aria-hidden="true"><circle cx="12.5" cy="12.5" r="11.6" fill="none" stroke="#fff" stroke-width="1.3"/><path d="M13.6 20v-6.4h2.2l.3-2.5h-2.5V9.5c0-.7.2-1.2 1.3-1.2h1.3V6.1c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3v1.8H9v2.5h2.1V20z" fill="#fff"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 25 25" aria-hidden="true"><rect x="1.2" y="1.2" width="22.6" height="22.6" rx="6.5" fill="none" stroke="#fff" stroke-width="2"/><circle cx="12.5" cy="12.5" r="5.2" fill="none" stroke="#fff" stroke-width="2"/><circle cx="18.9" cy="6.1" r="1.4" fill="#fff"/></svg></a>
+        <a href="#" aria-label="TikTok"><svg viewBox="0 0 25 25" aria-hidden="true"><circle cx="12.5" cy="12.5" r="12.5" fill="#000"/><path d="M14.6 5.5h2.3c.2 1.7 1.3 2.9 3 3.1v2.4c-1.1 0-2.1-.3-3-.9v4.6c0 2.5-2 4.4-4.5 4.4S8 17.2 8 14.8s2-4.4 4.5-4.4c.2 0 .5 0 .7.1v2.5c-.2-.1-.5-.1-.7-.1-1 0-1.9.8-1.9 1.9s.9 1.9 1.9 1.9 2.1-.8 2.1-2z" fill="#fff"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
