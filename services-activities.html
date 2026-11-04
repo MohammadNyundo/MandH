@@ -13,15 +13,19 @@
 </head>
 <body>
 <header class="site-header">
-  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="#fff" stroke-width="1.6"/></svg></button>
-  <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="accommodation.html">Accommodation</a>
-      <a href="services-activities.html" class="active" aria-current="page">Services &amp; Activities</a>
-      <a href="food-drinks.html">Food &amp; Drinks</a>
-      <a href="about-us.html">About Us</a>
-      <a href="book-now.html">Book Now</a>
+  <a class="brand" href="index.html" aria-label="M&amp;H Boutique Hotel, home">
+    <img class="logo-light" src="assets/images/logo-h.png" alt="" width="855" height="274">
+    <img class="logo-dark" src="assets/images/logo-h-navy.png" alt="" width="855" height="274">
+  </a>
+  <nav class="nav" id="site-nav" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="accommodation.html">Accommodation</a>
+    <a href="services-activities.html" class="active" aria-current="page">Services &amp; Activities</a>
+    <a href="food-drinks.html">Food &amp; Drinks</a>
+    <a href="book-now.html" class="nav-book">Book Now</a>
   </nav>
+  <a href="book-now.html" class="nav-cta">Book Now</a>
+  <button class="nav-toggle" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button>
 </header>
 <main>
 

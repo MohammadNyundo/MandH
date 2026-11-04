@@ -12,17 +12,30 @@
   /* ---------- Mobile navigation ---------- */
   var header = document.querySelector(".site-header");
   var toggle = document.querySelector(".nav-toggle");
+  function setMenu(open) {
+    header.classList.toggle("open", open);
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    document.documentElement.style.overflow = open ? "hidden" : "";
+  }
   if (header && toggle) {
-    toggle.addEventListener("click", function () {
-      var open = header.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
-    });
+    toggle.addEventListener("click", function () { setMenu(!header.classList.contains("open")); });
     header.querySelectorAll(".nav a").forEach(function (a) {
-      a.addEventListener("click", function () {
-        header.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
-      });
+      a.addEventListener("click", function () { setMenu(false); });
     });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && header.classList.contains("open")) setMenu(false);
+    });
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 1100 && header.classList.contains("open")) setMenu(false);
+    });
+  }
+
+  /* ---------- Home: transparent bar turns solid on scroll ---------- */
+  if (header && header.classList.contains("overlay")) {
+    var onScroll = function () { header.classList.toggle("scrolled", window.scrollY > 40); };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
   }
 
   /* ---------- Shared submit helper ---------- */

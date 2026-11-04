@@ -12,37 +12,83 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header class="site-header">
-  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="#fff" stroke-width="1.6"/></svg></button>
-  <nav class="nav">
-      <a href="index.html" class="active" aria-current="page">Home</a>
-      <a href="accommodation.html">Accommodation</a>
-      <a href="services-activities.html">Services &amp; Activities</a>
-      <a href="food-drinks.html">Food &amp; Drinks</a>
-      <a href="about-us.html">About Us</a>
-      <a href="book-now.html">Book Now</a>
+<header class="site-header overlay">
+  <a class="brand" href="index.html" aria-label="M&amp;H Boutique Hotel, home">
+    <img class="logo-light" src="assets/images/logo-h.png" alt="" width="855" height="274">
+    <img class="logo-dark" src="assets/images/logo-h-navy.png" alt="" width="855" height="274">
+  </a>
+  <nav class="nav" id="site-nav" aria-label="Main">
+    <a href="index.html" class="active" aria-current="page">Home</a>
+    <a href="accommodation.html">Accommodation</a>
+    <a href="services-activities.html">Services &amp; Activities</a>
+    <a href="food-drinks.html">Food &amp; Drinks</a>
+    <a href="book-now.html" class="nav-book">Book Now</a>
   </nav>
+  <a href="book-now.html" class="nav-cta">Book Now</a>
+  <button class="nav-toggle" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button>
 </header>
 <main>
 
 <section class="section hero" aria-label="Welcome">
   <div class="ph bg-photo" style="aspect-ratio:1440/768"><img src="assets/images/hero.jpg" alt="The pool and villas of M&amp;H Boutique Hotel" style="left:-1.53%;top:-24.09%;width:105.28%;height:148.05%"></div>
-  <img class="abs center-x hero-logo" src="assets/images/logo.png" alt="M&amp;H Boutique Hotel">
-  <div class="abs hero-rule"></div>
-  <p class="abs hero-welcome">Welcome to the villa</p>
-  <a class="abs center-x btn-outline" href="#houses">Book your stay</a>
+  <h1 class="visually-hidden">M&amp;H Boutique Hotel, Diani</h1>
+  <a class="abs center-x btn-cta" href="book-now.html">Book Now</a>
 </section>
 
-<section class="section intro">
-  <h2 class="abs">Your next holiday<br>
-home is waiting</h2>
-  <div class="abs intro-band">
-    <p>Just outside the lively tourist center of Diani Beach, you’ll find an oasis of peace and relaxation.<br>
+<section class="section story" aria-labelledby="story-title">
+  <div class="story-wrap">
+    <figure class="story-photo">
+      <img src="assets/images/margret-founder.jpg" alt="Margret Mweya, founder and Managing Director of M&amp;H Boutique Hotel" width="533" height="609">
+      <figcaption><strong>Margret Mweya</strong>Founder &amp; Managing Director</figcaption>
+    </figure>
 
-    Only 10 minutes from the beach and 15 minutes from Diani’s town center, our fully equipped boutique hotel offers
-    comfortable hotel rooms and spacious apartments, perfect for couples, friends, or families. With an oversized swimming
-    pool, a cozy bar, and a restaurant with a large terrace, you’ll have everything you need for a restful and unforgettable
-    holiday far from the rush of everyday life.</p>
+    <div class="story-text">
+      <h2 id="story-title">Our Story</h2>
+      <p class="story-open">M&amp;H Boutique Hotel invites you into a world of understated luxury and authentic Kenyan
+      hospitality, where each visit becomes a treasured memory and every guest becomes part of our story.</p>
+
+      <p>At the helm is Margret Mweya, founder and Managing Director, whose career in hospitality and hotel
+      bookings spans decades. Her understanding of what guests need, and her eye for detail, shape every stay.</p>
+      <p>For Margret, M&amp;H is the fulfilment of a cherished dream and a legacy for her children, grandchildren
+      and the generations to come. She has poured her heart&nbsp;into&nbsp;it.</p>
+
+    </div>
+  </div>
+</section>
+
+<section class="section intro-strip" aria-labelledby="intro-title">
+  <div class="strip-wrap">
+    <div class="strip-lead">
+      <p class="strip-eyebrow">Your next holiday home</p>
+      <h2 id="intro-title">Peace and quiet, ten minutes from the beach</h2>
+      <p>We sit just outside Diani’s busy tourist strip: 10 minutes to the beach, 15 to town, with a large pool, a cosy bar and a garden restaurant.</p>
+    </div>
+    <ul class="strip-guests">
+      <li>
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="6"/><path d="M16 3v4M16 25v4M3 16h4M25 16h4M6.8 6.8l2.8 2.8M22.4 22.4l2.8 2.8M6.8 25.2l2.8-2.8M22.4 9.6l2.8-2.8"/></svg>
+        <h3>Weekend breaks</h3>
+        <p>Studios for two with breakfast included, from $80 a night.</p>
+        <a href="accommodation.html#studio-rooms">See the studios</a>
+      </li>
+      <li>
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 15 16 5l12 10M7 13v14h18V13"/><path d="M13 27v-7h6v7"/></svg>
+        <h3>Family holidays</h3>
+        <p>Two and three bedroom houses with their own kitchen, sleeping up to six.</p>
+        <a href="accommodation.html#two-bedroom">See the houses</a>
+      </li>
+      <li>
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M26 5C13 5 6 11 6 20c0 3 1 5 2 7 2-8 7-13 13-15-5 3-9 8-10 14 9 1 15-6 15-21z"/></svg>
+        <h3>Time to recharge</h3>
+        <p>Quiet gardens, poolside beds, free Wi‑Fi and a kitchen open all day.</p>
+        <a href="services-activities.html">Our services</a>
+      </li>
+      <li>
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="10" cy="11" r="3.5"/><circle cx="22" cy="11" r="3.5"/><path d="M3 26c0-4.5 3-7.5 7-7.5s7 3 7 7.5M15 26c0-4.5 3-7.5 7-7.5s7 3 7 7.5"/></svg>
+        <h3>Teams &amp; retreats</h3>
+        <p>A modern conference room, with rooms and meals for the whole group.</p>
+        <a href="book-now.html">Plan your event</a>
+      </li>
+    </ul>
   </div>
 </section>
 
