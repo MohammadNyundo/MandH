@@ -8,7 +8,8 @@ Plain HTML / CSS / JS rebuild of the Canva site
 ```
 index.html                 Home
 accommodation.html         Studio, 1, 2 and 3 bedroom
-services-activities.html   Services & Activities
+services-activities.html   Redirect to home FAQ (activities moved there)
+conference.html            Conference room (hidden: noindex, not in nav/footer)
 food-drinks.html           Food & Drinks
 menus.html                 Food + drinks menu (images of the Canva menu pages)
 about-us.html              About us

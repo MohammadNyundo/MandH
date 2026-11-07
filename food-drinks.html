@@ -20,89 +20,330 @@
   <nav class="nav" id="site-nav" aria-label="Main">
     <a href="index.html">Home</a>
     <a href="accommodation.html">Accommodation</a>
-    <a href="services-activities.html">Services &amp; Activities</a>
     <a href="food-drinks.html" class="active" aria-current="page">Food &amp; Drinks</a>
-    <a href="book-now.html" class="nav-book">Book Now</a>
+    <a href="accommodation.html" class="nav-book">Book Now</a>
   </nav>
-  <a href="book-now.html" class="nav-cta">Book Now</a>
+  <a href="accommodation.html" class="nav-cta">Book Now</a>
   <button class="nav-toggle" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button>
 </header>
 <main>
 
-<section class="page-banner food-banner">
-  <div class="ph bg-photo" style="aspect-ratio:1440/150"><img src="assets/images/ca4e4292b3ee1c32619b32ba81ec77cc.jpg" alt="" style="left:-6.81%;top:-395.33%;width:126.32%;height:808.67%" loading="lazy"></div>
-  <h1>Services &amp; Activities</h1>
-  <p>Crafting unforgettable stays, one guest at a time.</p>
+<section class="fd-intro sky-section" aria-labelledby="fd-title">
+  <div class="sky-layer" aria-hidden="true">
+    <img class="cirrus cirrus--wisp" src="assets/images/cirrus-wisp.webp" alt="">
+    <img class="cirrus cirrus--streaks" src="assets/images/cirrus-streaks.webp" alt="" loading="lazy">
+  </div>
+  <div class="fd-wrap">
+    <h1 id="fd-title">Food &amp; Drinks</h1>
+    <p class="fd-lede">Coastal Kenyan cooking with a touch of the Orient, made each day from fresh market produce. Everything is homemade.</p>
+    <div class="fd-photos">
+      <figure>
+        <img src="assets/images/d9fdf499817ea3582f7a265e28b551d8.jpg" alt="Grilled chicken with rice" loading="lazy">
+        <figcaption>The restaurant<span>Breakfast, lunch and dinner on the terrace</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/e986a2f6874ca20af48845469426e3dc.jpg" alt="A cocktail on the bar" loading="lazy">
+        <figcaption>The bar<span>Wines, cocktails and fresh tropical juices</span></figcaption>
+      </figure>
+    </div>
+    <nav class="fd-jump" aria-label="Menus">
+      <a href="#food">Food menu</a>
+      <a href="#drinks">Drinks menu</a>
+    </nav>
+  </div>
 </section>
 
-<section class="section rows food">
-  <div class="row">
-    <div class="ph" style="aspect-ratio:403/292"><img src="assets/images/d9fdf499817ea3582f7a265e28b551d8.jpg" alt="Grilled chicken with rice" style="left:-4.47%;top:0.00%;width:108.68%;height:100.00%" loading="lazy"></div>
-    <div class="text">
-      <p>At M&amp;H Boutique Hotel, dining is more than just a meal — it’s an experience designed to awaken your senses.<br>
-Our full-service bar and restaurant sit beside a spacious, sun-kissed terrace, where gentle coastal breezes and the<br>
-scent of the ocean set the stage for unforgettable moments. Whether you’re enjoying a relaxed breakfast, a<br>
-leisurely lunch, or a candlelit dinner under the stars, every bite is crafted to make you feel both at home and in<br>
-the heart of something special.</p>
-      <p>Our culinary philosophy draws inspiration from the rich traditions of Kenyan coastal cuisine, infused with<br>
-delicate oriental influences. We work exclusively with daily-fresh ingredients sourced from local markets,<br>
-ensuring that every dish tells the story of the region’s vibrant flavors. From freshly caught seafood grilled to<br>
-perfection, to aromatic spices that have traveled through generations, each plate is an expression of<br>
-authenticity and creativity. Everything is homemade, prepared with passion, and served fresh to your table.</p>
-      <a class="btn-outline soft" href="menus.html">Food menu</a>
+<section class="menu" id="menu" aria-labelledby="menu-title">
+  <div class="menu-wrap">
+    <header class="menu-head">
+      <h2 id="menu-title">The menu</h2>
+      <div class="menu-tabs" role="tablist" aria-label="Menu">
+        <button type="button" role="tab" id="tab-food" aria-controls="food" aria-selected="true">Food</button>
+        <button type="button" role="tab" id="tab-drinks" aria-controls="drinks" aria-selected="false" tabindex="-1">Drinks</button>
+      </div>
+      <p class="menu-note">Prices in Kenyan shillings</p>
+    </header>
+
+    <div class="menu-panel" id="food" role="tabpanel" aria-labelledby="tab-food">
+      <section class="mcat">
+        <h3>Breakfast</h3>
+        <ul>
+          <li><span class="mi">All-day breakfast</span><span class="mp">1,500</span><p>Two farm eggs, baked beans, chicken sausage, bacon, potatoes, toast, fruit and juice.</p></li>
+          <li><span class="mi">In-house menu</span><span class="mp">1,000</span><p>Toast, two sausages, two eggs, fruit and a pot of tea or coffee.</p></li>
+        </ul>
+      </section>
+      <section class="mcat">
+        <h3>Bitings</h3>
+        <ul>
+          <li><span class="mi">Chicken satay · 3 pcs</span><span class="mp">450</span><p>Yoghurt-marinated chicken with peanut sauce.</p></li>
+          <li><span class="mi">Crispy samosas · 3 pcs</span><span class="mp">300</span><p>Chicken or beef, served with lemon.</p></li>
+          <li><span class="mi">Chicken lollipops · 6 pcs</span><span class="mp">500</span><p>Deep-fried, with cheese sauce.</p></li>
+          <li><span class="mi">Prawns pilipili · 4 pcs</span><span class="mp">600</span><p>Garlic-fried king prawns.</p></li>
+          <li><span class="mi">Cheese toast · 2 pcs</span><span class="mp">400</span><p>Crusty toasted bread with melted cheese.</p></li>
+          <li><span class="mi">Cheese plate</span><span class="mp">1,000</span><p>Goat cheese, cheddar, Parmesan and Gouda with crackers and nuts. Add meat +200.</p></li>
+        </ul>
+      </section>
+      <section class="mcat">
+        <h3>Salads</h3>
+        <ul>
+          <li><span class="mi">Traditional Cobb salad</span><span class="mp">750</span><p>Lettuce, bacon, egg, chicken, avocado and cheese with ranch dressing.</p></li>
+          <li><span class="mi">Fresh garden salad</span><span class="mp">450</span><p>Salad leaves, tomato, cucumber, peppers and avocado with vinaigrette.</p></li>
+          <li><span class="mi">Avocado &amp; prawn salad</span><span class="mp">850</span><p>Poached king prawns and diced avocado with cocktail sauce.</p></li>
+        </ul>
+      </section>
+      <section class="mcat">
+        <h3>Soups</h3>
+        <ul>
+          <li><span class="mi">Spicy clear beef broth</span><span class="mp">350</span><p>With green chillies.</p></li>
+          <li><span class="mi">Tom yum goong</span><span class="mp">500</span><p>Lemongrass Thai prawn soup with coconut and mushrooms.</p></li>
+          <li><span class="mi">Soup of the day</span><span class="mp">350</span><p>The chef’s choice.</p></li>
+        </ul>
+      </section>
+      <section class="mcat">
+        <h3>Our specials</h3>
+        <ul>
+          <li><span class="mi">Beef karanga</span><span class="mp">700</span><p>Boneless beef in a spiced Kenyan stew of tomato, onion and dhania, with ugali.</p></li>
+          <li><span class="mi">Lake Victoria harvest</span><span class="mp">100</span><p>Whole baby fish, deep-fried Swahili style, with ugali and kachumbari.</p></li>
+        </ul>
+      </section>
+      <section class="mcat">
+        <h3>On the grill</h3>
+        <ul>
+          <li><span class="mi">Prawn brochettes</span><span class="mp">2,000</span><p>Marinated jumbo prawns with fries.</p></li>
+          <li><span class="mi">Catch of the day</span><span class="mp">1,000</span><p>Butter-fried, with tartare sauce.</p></li>
+          <li><span class="mi">Grilled rock lobster</span><span class="mp">2,500</span><p>Cognac-marinated, with garlic butter and fries.</p></li>
+          <li><span class="mi">Crispy calamari rings</span><span class="mp">1,500</span><p>With tartare sauce and fries.</p></li>
+          <li><span class="mi">Oven-roasted lamb chops</span><span class="mp">1,900</span><p>With tangy potato wedges and mint sauce.</p></li>
+          <li><span class="mi">Roasted chicken</span><span class="mp">900</span><p>Rosemary-marinated, with mushroom sauce and fries.</p></li>
+          <li><span class="mi">Grilled beef tenderloin</span><span class="mp">1,900</span><p>Highland beef with mashed potatoes and pepper sauce.</p></li>
+          <li><span class="mi">Grilled pork chops</span><span class="mp">1,600</span><p>Honey-marinated, with sweet &amp; sour sauce and fries.</p></li>
+        </ul>
+      </section>
+      <section class="mcat">
+        <h3>Burgers, sandwiches &amp; wraps</h3>
+        <ul>
+          <li><span class="mi">Club sandwich</span><span class="mp">800</span><p>White or brown bread with tomato, cucumber, fried egg and cheese.</p></li>
+          <li><span class="mi">Grilled vegetable panini</span><span class="mp">700</span><p>Provençal grilled vegetables — eggplant, zucchini — with cheese.</p></li>
+          <li><span class="mi">Burger</span><span class="mp">1,200</span><p>Homemade charcoal-grilled chicken, beef or vegetable patty on a sesame bun, with lettuce, tomato, cucumber, cheese and gherkin. Add bacon +200.</p></li>
+          <li><span class="mi">Buffalo chicken wrap</span><span class="mp">1,100</span><p>Marinated chicken tenders and cheese in a tortilla.</p></li>
+          <li><span class="mi">Ham &amp; cheese sandwich</span><span class="mp">900</span><p>Homemade, toasted or plain.</p></li>
+        </ul>
+      </section>
+      <section class="mcat">
+        <h3>Indian cuisine</h3>
+        <ul>
+          <li><span class="mi">Chicken tikka masala</span><span class="mp">1,200</span><p>In a masala and tomato gravy, with rice or chapati.</p></li>
+          <li><span class="mi">Bhuna gosht</span><span class="mp">1,500</span><p>Boneless mutton in a rich brown curry, with steamed rice.</p></li>
+          <li><span class="mi">Paneer saag</span><span class="mp">1,200</span><p>Cottage cheese in spiced spinach with ginger and garlic, with chapati or rice.</p></li>
+        </ul>
+      </section>
+      <section class="mcat">
+        <h3>Pasta</h3>
+        <ul>
+          <li><span class="mi">Spaghetti aglio e olio</span><span class="mp">900</span><p>Chilli, garlic, olive oil and basil, finished with cheese.</p></li>
+          <li><span class="mi">Penne</span><span class="mp">1,000</span><p>With a homemade sauce of your choice: bolognese, tomato or béchamel.</p></li>
+        </ul>
+      </section>
+      <section class="mcat">
+        <h3>Pizza</h3>
+        <ul>
+          <li><span class="mi">Margherita</span><span class="mp">900</span><p>Tomato sauce, tomato, mozzarella, olives and oregano.</p></li>
+          <li><span class="mi">Meat lover</span><span class="mp">1,300</span><p>Tomato sauce, cheese, beef and chicken sausage, ham, chilli and oregano.</p></li>
+        </ul>
+      </section>
+      <section class="mcat">
+        <h3>Platter</h3>
+        <ul>
+          <li><span class="mi">Smoky meat platter</span><span class="mp">4,500</span><p>Grilled beef, chicken, lamb chops and BBQ sausages with rosemary sauce.</p></li>
+        </ul>
+      </section>
+      <section class="mcat">
+        <h3>Kids</h3>
+        <ul>
+          <li><span class="mi">BBQ sausages · 2 pcs</span><span class="mp">400</span></li>
+          <li><span class="mi">Chicken nuggets</span><span class="mp">450</span></li>
+          <li><span class="mi">Fish fingers · 6 pcs</span><span class="mp">450</span></li>
+          <li><span class="mi">Bacon &amp; egg sesame bun</span><span class="mp">450</span></li>
+          <li><span class="mi">Plain fries</span><span class="mp">350</span></li>
+          <li><span class="mi">Loaded fries</span><span class="mp">500</span></li>
+          <li><span class="mi">Masala fries</span><span class="mp">400</span></li>
+        </ul>
+      </section>
+      <section class="mcat">
+        <h3>Dessert</h3>
+        <ul>
+          <li><span class="mi">Cake of the day</span><span class="mp">600</span><p>Freshly baked by our chef.</p></li>
+          <li><span class="mi">Seasonal carved fruit</span><span class="mp">500</span><p>Tropical fruit with fresh mint.</p></li>
+          <li><span class="mi">Ice cream</span><span class="mp">350</span><p>Three scoops of your choice.</p></li>
+          <li><span class="mi">Banana flambé</span><span class="mp">600</span><p>Kikambala banana flambéed with Cointreau, with ice cream.</p></li>
+          <li><span class="mi">Cheese platter</span><span class="mp">1,200</span><p>Assorted cheeses, crudités, pickles, digestive biscuits and dried fruit.</p></li>
+        </ul>
+      </section>
     </div>
-  </div>
-  <div class="row">
-    <div class="ph" style="aspect-ratio:403/297"><img src="assets/images/e986a2f6874ca20af48845469426e3dc.jpg" alt="A cocktail on the bar" style="left:0.00%;top:-53.54%;width:100.00%;height:203.37%" loading="lazy"></div>
-    <div class="text">
-      <p>The heart of our dining experience lies in our cozy bar and elegant restaurant — spaces designed for connection,<br>
-laughter, and lingering conversations. Our bar serves an exceptional selection of wines, handcrafted cocktails,<br>
-and fresh juices made from tropical fruits sourced right here on the coast. As the sun sets, the terrace becomes<br>
-the perfect place to sip a signature drink, watch the colors of the sky change, and savor the magic of Diani<br>
-Beach.</p>
-      <p>Hospitality is at the core of everything we do. Our dedicated and highly trained staff are here not only to serve,<br>
-but to anticipate your needs — ensuring each dining moment feels effortless, warm, and memorable. Whether<br>
-you’re here for a quiet, romantic dinner, a family celebration, or simply a refreshing drink after a day by the pool,<br>
-our focus is always on delivering excellence with a personal touch.</p>
-      <a class="btn-outline soft" href="menus.html#drinks">Drink menu</a>
+
+    <div class="menu-panel" id="drinks" role="tabpanel" aria-labelledby="tab-drinks">
+      <section class="mcat">
+        <h3>Cocktails</h3>
+        <ul>
+          <li><span class="mi">Mojito</span><span class="mp">700</span><p>Light rum, lime, sugar syrup, mint, soda.</p></li>
+          <li><span class="mi">Piña colada</span><span class="mp">800</span><p>Light rum, Malibu, pineapple, coconut cream.</p></li>
+          <li><span class="mi">Tequila sunrise</span><span class="mp">800</span><p>Tequila, orange juice, grenadine.</p></li>
+          <li><span class="mi">Blue lagoon</span><span class="mp">700</span><p>Vodka, blue curaçao, Sprite.</p></li>
+          <li><span class="mi">Cosmopolitan</span><span class="mp">850</span></li>
+          <li><span class="mi">Negroni</span><span class="mp">800</span><p>Gin, Campari, sweet vermouth.</p></li>
+          <li><span class="mi">Strawberry daiquiri</span><span class="mp">900</span><p>Strawberry purée, lime, light rum.</p></li>
+          <li><span class="mi">Dawa</span><span class="mp">800</span><p>Vodka, honey, fresh lime.</p></li>
+          <li><span class="mi">Long Island</span><span class="mp">1,200</span><p>Vodka, gin, triple sec, light rum, tequila.</p></li>
+          <li><span class="mi">7 &amp; 7</span><span class="mp">900</span><p>Whisky, lime, a dash of Sprite.</p></li>
+          <li><span class="mi">Whiskey sour</span><span class="mp">700</span><p>Bourbon, egg white, syrup, lime.</p></li>
+          <li><span class="mi">Bloody Mary</span><span class="mp">850</span><p>Vodka, tomato juice, black pepper, Worcestershire, Tabasco, salt.</p></li>
+          <li><span class="mi">Margarita</span><span class="mp">800</span><p>Tequila, Cointreau, lime, salted rim.</p></li>
+        </ul>
+      </section>
+      <section class="mcat">
+        <h3>Soft drinks</h3>
+        <ul>
+          <li><span class="mi">Sodas</span><span class="mp">150</span></li>
+          <li><span class="mi">Red Bull</span><span class="mp">350</span></li>
+          <li><span class="mi">Still water · 500 ml</span><span class="mp">100</span></li>
+          <li><span class="mi">Still water · 1 L</span><span class="mp">200</span></li>
+          <li><span class="mi">Sparkling water · 1 L</span><span class="mp">250</span></li>
+          <li><span class="mi">Del Monte juices</span><span class="mp">500</span></li>
+        </ul>
+      </section>
+      <section class="mcat">
+        <h3>Beers &amp; ciders</h3>
+        <ul>
+          <li><span class="mi">Local beers</span><span class="mp">350</span></li>
+          <li><span class="mi">Heineken</span><span class="mp">500</span></li>
+          <li><span class="mi">Savanna</span><span class="mp">450</span></li>
+          <li><span class="mi">Guarana</span><span class="mp">450</span></li>
+          <li><span class="mi">Black Ice</span><span class="mp">450</span></li>
+          <li><span class="mi">Pineapple Punch</span><span class="mp">450</span></li>
+        </ul>
+      </section>
+      <section class="mcat">
+        <h3>Mocktails</h3>
+        <ul>
+          <li><span class="mi">Virgin piña colada</span><span class="mp">600</span></li>
+          <li><span class="mi">Virgin mojito</span><span class="mp">600</span></li>
+          <li><span class="mi">Virgin dawa</span><span class="mp">600</span></li>
+          <li><span class="mi">Virgin Bloody Mary</span><span class="mp">700</span></li>
+          <li><span class="mi">Shirley Temple</span><span class="mp">500</span></li>
+          <li><span class="mi">Lemonade</span><span class="mp">600</span></li>
+        </ul>
+      </section>
+      <section class="mcat mcat--wide">
+        <h3>Spirits</h3>
+        <div class="liquor">
+          <table>
+            <thead><tr><th scope="col">Whisky &amp; cognac</th><th scope="col">Tot</th><th scope="col">Bottle</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Johnnie Walker Black · 1 L</th><td>550</td><td>8,000</td></tr>
+              <tr><th scope="row">Johnnie Walker Black · 450 ml</th><td>550</td><td>6,500</td></tr>
+              <tr><th scope="row">Johnnie Walker Double Black · 1 L</th><td>600</td><td>12,000</td></tr>
+              <tr><th scope="row">Johnnie Walker Double Black · 750 ml</th><td>600</td><td>9,000</td></tr>
+              <tr><th scope="row">Johnnie Walker Red Label · 750 ml</th><td>400</td><td>5,000</td></tr>
+              <tr><th scope="row">Jack Daniel’s · 750 ml</th><td>450</td><td>7,000</td></tr>
+              <tr><th scope="row">Grant’s · 750 ml</th><td>400</td><td>4,000</td></tr>
+              <tr><th scope="row">Famous Grouse · 1 L</th><td>550</td><td>5,500</td></tr>
+              <tr><th scope="row">Glenlivet 12 · 750 ml</th><td>550</td><td>9,000</td></tr>
+              <tr><th scope="row">Ballantine’s · 750 ml</th><td>500</td><td>6,000</td></tr>
+              <tr><th scope="row">Jameson · 750 ml</th><td>300</td><td>6,000</td></tr>
+              <tr><th scope="row">Monkey Shoulder · 1 L</th><td>600</td><td>11,000</td></tr>
+              <tr><th scope="row">Chivas Regal 12 · 750 ml</th><td>400</td><td>7,500</td></tr>
+              <tr><th scope="row">Hennessy VS · 750 ml</th><td>800</td><td>16,300</td></tr>
+            </tbody>
+          </table>
+          <table>
+            <thead><tr><th scope="col">Vodka &amp; gin</th><th scope="col">Tot</th><th scope="col">Bottle</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Cîroc · 750 ml</th><td>400</td><td>9,000</td></tr>
+              <tr><th scope="row">Absolut · 750 ml</th><td>400</td><td>5,500</td></tr>
+              <tr><th scope="row">Smirnoff</th><td>300</td><td>4,000</td></tr>
+              <tr><th scope="row">Gordon’s · 750 ml</th><td>300</td><td>3,500</td></tr>
+              <tr><th scope="row">Tanqueray</th><td>400</td><td>6,700</td></tr>
+              <tr><th scope="row">Bombay Sapphire · 750 ml</th><td>400</td><td>5,500</td></tr>
+              <tr><th scope="row">Hendrick’s · 1 L</th><td>600</td><td>11,500</td></tr>
+              <tr><th scope="row">Hendrick’s · 750 ml</th><td>600</td><td>10,000</td></tr>
+              <tr><th scope="row">Malfy Gin · 750 ml</th><td>400</td><td>7,000</td></tr>
+            </tbody>
+          </table>
+          <table>
+            <thead><tr><th scope="col">Rum</th><th scope="col">Tot</th><th scope="col">Bottle</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Captain Morgan Gold · 750 ml</th><td>350</td><td>3,000</td></tr>
+              <tr><th scope="row">Captain Morgan Spiced · 750 ml</th><td>300</td><td>4,500</td></tr>
+              <tr><th scope="row">Bacardi White · 750 ml</th><td>300</td><td>5,200</td></tr>
+              <tr><th scope="row">Bacardi Gold · 750 ml</th><td>350</td><td>5,000</td></tr>
+              <tr><th scope="row">Havana Club 7 · 750 ml</th><td>350</td><td>6,500</td></tr>
+            </tbody>
+          </table>
+          <table>
+            <thead><tr><th scope="col">Tequila</th><th scope="col">Tot</th><th scope="col">Bottle</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Don Julio Gold · 750 ml</th><td>600</td><td>10,500</td></tr>
+              <tr><th scope="row">Don Julio Silver · 750 ml</th><td>500</td><td>12,000</td></tr>
+              <tr><th scope="row">Jose Cuervo Silver · 750 ml</th><td>400</td><td>6,500</td></tr>
+              <tr><th scope="row">Jose Cuervo Gold · 750 ml</th><td>400</td><td>6,500</td></tr>
+            </tbody>
+          </table>
+          <table>
+            <thead><tr><th scope="col">Liqueurs &amp; aperitifs</th><th scope="col">Tot</th><th scope="col">Bottle</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Baileys · 750 ml</th><td>400</td><td>5,500</td></tr>
+              <tr><th scope="row">Southern Comfort · 750 ml</th><td>300</td><td>7,500</td></tr>
+              <tr><th scope="row">Jägermeister · 1 L</th><td>400</td><td>7,500</td></tr>
+              <tr><th scope="row">Cointreau · 750 ml</th><td>400</td><td>6,500</td></tr>
+              <tr><th scope="row">Kahlúa · 750 ml</th><td>300</td><td>5,500</td></tr>
+              <tr><th scope="row">Aperol · 750 ml</th><td>400</td><td>6,500</td></tr>
+              <tr><th scope="row">Campari · 750 ml</th><td>300</td><td>7,500</td></tr>
+              <tr><th scope="row">Martini Bianco · 750 ml</th><td>400</td><td>5,500</td></tr>
+              <tr><th scope="row">Martini Rosso</th><td>400</td><td>6,000</td></tr>
+              <tr><th scope="row">Ricard</th><td>300</td><td>5,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <p class="menu-foot">Please drink responsibly.</p>
     </div>
   </div>
 </section>
+
 </main>
 <footer class="site-footer">
   <div class="footer-rule"></div>
-  <div class="footer-cols inner">
-    <div>
-      <h4>Location</h4>
-      <p>P.O BOX 633<br>
-we are located in Mombasa, Diani (Kinondo town)<br>
-close to green garden accademy.</p>
-      <a class="maps" href="https://www.google.com/maps/place/M%26H+Boutique+Hotel/@-4.3726463,39.5265662,17z/data=!4m20!1m10!3m9!1s0x18404d8eb2628c39:0x6f411917913b250e!2sM%26H+Boutique+Hotel!5m2!4m1!1i2!8m2!3d-4.3723307!4d39.5253217!16s%2Fg%2F11zbksnlnq!3m8!1s0x18404d8eb2628c39:0x6f411917913b250e!5m2!4m1!1i2!8m2!3d-4.3723307!4d39.5253217!16s%2Fg%2F11zbksnlnq?entry=ttu" target="_blank" rel="noopener">Google maps pin</a>
-      <div class="contacts">
-        <h4>Contacts</h4>
-        <a class="contact-line" href="tel:+254110766432">+254 110766432</a>
-        <a class="contact-line" href="mailto:mandhboutiquehotel@gmail.com">mandhboutiquehotel@gmail.com</a>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a href="index.html" aria-label="M&amp;H Boutique Hotel, home"><img src="assets/images/logo-h.png" alt="M&amp;H Boutique Hotel" width="855" height="274" loading="lazy"></a>
+      <p>A peaceful boutique villa with private houses, a pool, a bar and a garden restaurant in Diani.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Visit us</h4>
+      <p>Kinondo, Diani<br>Near Green Garden Academy</p>
+      <a class="footer-arrow" href="https://www.google.com/maps/place/M%26H+Boutique+Hotel/@-4.3726463,39.5265662,17z/data=!4m20!1m10!3m9!1s0x18404d8eb2628c39:0x6f411917913b250e!2sM%26H+Boutique+Hotel!5m2!4m1!1i2!8m2!3d-4.3723307!4d39.5253217!16s%2Fg%2F11zbksnlnq!3m8!1s0x18404d8eb2628c39:0x6f411917913b250e!5m2!4m1!1i2!8m2!3d-4.3723307!4d39.5253217!16s%2Fg%2F11zbksnlnq?entry=ttu" target="_blank" rel="noopener">Get directions <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a class="footer-contact" href="tel:+254110766432">+254 110 766 432</a>
+      <a class="footer-contact" href="mailto:mandhboutiquehotel@gmail.com">mandhboutiquehotel@gmail.com</a>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/mandh_boutique_hotel/" target="_blank" rel="noopener" aria-label="M&amp;H Boutique Hotel on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.15" fill="currentColor"/></svg></a>
+        <a href="https://www.tiktok.com/@mandhboutiquehotel" target="_blank" rel="noopener" aria-label="M&amp;H Boutique Hotel on TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.6 3h-3.1v12.2a2.7 2.7 0 1 1-2.7-2.7c.3 0 .6 0 .9.1V9.4a5.9 5.9 0 1 0 5 5.8V9a7.4 7.4 0 0 0 4.3 1.4V7.3A4.4 4.4 0 0 1 16.6 3z"/></svg></a>
       </div>
     </div>
-    <div class="footer-links">
-      <h4>Links</h4>
-      <a href="index.html">Home</a>
-      <a href="accommodation.html">Accommodation</a>
-      <a href="services-activities.html">Services and Activities</a>
-      <a href="food-drinks.html">Food and Drinks</a>
-      <a href="about-us.html">About us</a>
-      <a href="book-now.html">Book Now</a>
-      <a href="gallery.html">Picture gallery</a>
-    </div>
-    <div>
-      <h4>Our social</h4>
-      <!-- TODO: add the hotel's real social media profile links (the Canva site has none yet) -->
-      <div class="socials">
-        <a href="#" aria-label="Facebook"><svg viewBox="0 0 25 25" aria-hidden="true"><circle cx="12.5" cy="12.5" r="11.6" fill="none" stroke="#fff" stroke-width="1.3"/><path d="M13.6 20v-6.4h2.2l.3-2.5h-2.5V9.5c0-.7.2-1.2 1.3-1.2h1.3V6.1c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3v1.8H9v2.5h2.1V20z" fill="#fff"/></svg></a>
-        <a href="#" aria-label="Instagram"><svg viewBox="0 0 25 25" aria-hidden="true"><rect x="1.2" y="1.2" width="22.6" height="22.6" rx="6.5" fill="none" stroke="#fff" stroke-width="2"/><circle cx="12.5" cy="12.5" r="5.2" fill="none" stroke="#fff" stroke-width="2"/><circle cx="18.9" cy="6.1" r="1.4" fill="#fff"/></svg></a>
-        <a href="#" aria-label="TikTok"><svg viewBox="0 0 25 25" aria-hidden="true"><circle cx="12.5" cy="12.5" r="12.5" fill="#000"/><path d="M14.6 5.5h2.3c.2 1.7 1.3 2.9 3 3.1v2.4c-1.1 0-2.1-.3-3-.9v4.6c0 2.5-2 4.4-4.5 4.4S8 17.2 8 14.8s2-4.4 4.5-4.4c.2 0 .5 0 .7.1v2.5c-.2-.1-.5-.1-.7-.1-1 0-1.9.8-1.9 1.9s.9 1.9 1.9 1.9 2.1-.8 2.1-2z" fill="#fff"/></svg></a>
-      </div>
-    </div>
+    <nav class="footer-col" aria-label="Footer">
+      <h4>Explore</h4>
+      <ul class="footer-nav">
+        <li><a href="accommodation.html">Accommodation</a></li>
+        <li><a href="food-drinks.html">Food &amp; Drinks</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span class="footer-year">2026</span> M&amp;H Boutique Hotel</p>
+    <a class="footer-arrow" href="accommodation.html">Book your stay <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
   </div>
 </footer>
 <script src="js/main.js"></script>

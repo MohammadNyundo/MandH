@@ -20,11 +20,10 @@
   <nav class="nav" id="site-nav" aria-label="Main">
     <a href="index.html" class="active" aria-current="page">Home</a>
     <a href="accommodation.html">Accommodation</a>
-    <a href="services-activities.html">Services &amp; Activities</a>
     <a href="food-drinks.html">Food &amp; Drinks</a>
-    <a href="book-now.html" class="nav-book">Book Now</a>
+    <a href="accommodation.html" class="nav-book">Book Now</a>
   </nav>
-  <a href="book-now.html" class="nav-cta">Book Now</a>
+  <a href="accommodation.html" class="nav-cta">Book Now</a>
   <button class="nav-toggle" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button>
 </header>
 <main>
@@ -32,7 +31,7 @@
 <section class="section hero" aria-label="Welcome">
   <div class="ph bg-photo" style="aspect-ratio:1440/768"><img src="assets/images/hero.jpg" alt="The pool and villas of M&amp;H Boutique Hotel" style="left:-1.53%;top:-24.09%;width:105.28%;height:148.05%"></div>
   <h1 class="visually-hidden">M&amp;H Boutique Hotel, Diani</h1>
-  <a class="abs center-x btn-cta" href="book-now.html">Book Now</a>
+  <a class="abs center-x btn-cta" href="accommodation.html">Book Now</a>
 </section>
 
 <section class="section story" aria-labelledby="story-title">
@@ -56,182 +55,470 @@
   </div>
 </section>
 
-<section class="section intro-strip" aria-labelledby="intro-title">
-  <div class="strip-wrap">
-    <div class="strip-lead">
-      <p class="strip-eyebrow">Your next holiday home</p>
-      <h2 id="intro-title">Peace and quiet, ten minutes from the beach</h2>
-      <p>We sit just outside Diani’s busy tourist strip: 10 minutes to the beach, 15 to town, with a large pool, a cosy bar and a garden restaurant.</p>
-    </div>
-    <ul class="strip-guests">
-      <li>
-        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="6"/><path d="M16 3v4M16 25v4M3 16h4M25 16h4M6.8 6.8l2.8 2.8M22.4 22.4l2.8 2.8M6.8 25.2l2.8-2.8M22.4 9.6l2.8-2.8"/></svg>
-        <h3>Weekend breaks</h3>
-        <p>Studios for two with breakfast included, from $80 a night.</p>
-        <a href="accommodation.html#studio-rooms">See the studios</a>
-      </li>
-      <li>
-        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 15 16 5l12 10M7 13v14h18V13"/><path d="M13 27v-7h6v7"/></svg>
-        <h3>Family holidays</h3>
-        <p>Two and three bedroom houses with their own kitchen, sleeping up to six.</p>
-        <a href="accommodation.html#two-bedroom">See the houses</a>
-      </li>
-      <li>
-        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M26 5C13 5 6 11 6 20c0 3 1 5 2 7 2-8 7-13 13-15-5 3-9 8-10 14 9 1 15-6 15-21z"/></svg>
-        <h3>Time to recharge</h3>
-        <p>Quiet gardens, poolside beds, free Wi‑Fi and a kitchen open all day.</p>
-        <a href="services-activities.html">Our services</a>
-      </li>
-      <li>
-        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="10" cy="11" r="3.5"/><circle cx="22" cy="11" r="3.5"/><path d="M3 26c0-4.5 3-7.5 7-7.5s7 3 7 7.5M15 26c0-4.5 3-7.5 7-7.5s7 3 7 7.5"/></svg>
-        <h3>Teams &amp; retreats</h3>
-        <p>A modern conference room, with rooms and meals for the whole group.</p>
-        <a href="book-now.html">Plan your event</a>
-      </li>
-    </ul>
+<section class="section sky-section acc" id="houses" aria-labelledby="acc-title">
+  <div class="sky-layer" aria-hidden="true">
+    <img class="cirrus cirrus--wisp" src="assets/images/cirrus-wisp.webp" alt="" loading="lazy">
+    <img class="cirrus cirrus--streaks" src="assets/images/cirrus-streaks.webp" alt="" loading="lazy">
   </div>
-</section>
-
-<section class="section houses" id="houses">
-  <h2 class="abs heading-xl">Houses and studios</h2>
-  <div class="abs room-cards">
-      <a class="room-card" href="accommodation.html#studio-rooms">
-        <div class="ph" style="aspect-ratio:285/197"><img src="assets/images/2985c23bfe01b9428196220fec3acae5.jpg" alt="Studios" style="left:-25.61%;top:-32.99%;width:168.77%;height:183.25%" loading="lazy"></div>
-        <p class="info" style="font-weight:400">Max 2 guests, 1 bed.</p>
-        <div class="beds"><svg viewBox="0 0 30 22" fill="none" stroke="#fff" stroke-width="1.6" aria-hidden="true"><path d="M2 20V3M28 20V3M2 14h26M2 10.5h26"/><rect x="4.5" y="5.5" width="9" height="5" rx="1.2"/><rect x="16.5" y="5.5" width="9" height="5" rx="1.2"/></svg></div>
+  <div class="acc-wrap">
+    <header class="acc-head">
+      <p class="section-eyebrow">Direct booking</p>
+      <h2 id="acc-title">Accommodation</h2>
+      <p class="acc-lead">Cozy studios and private houses in a serene, intimate garden setting.</p>
+      <p class="acc-perks">Balconies over the pool <span aria-hidden="true">·</span> a safe for your valuables <span aria-hidden="true">·</span> warm, attentive staff <span aria-hidden="true">·</span> quiet nights</p>
+    </header>
+    <div class="acc-grid">
+    <a class="acc-card acc-card--wide" href="accommodation.html#studio-rooms" data-room-gallery="gallery-studios" aria-haspopup="dialog">
+      <div class="acc-photo"><img src="assets/images/2985c23bfe01b9428196220fec3acae5.jpg" alt="Studio rooms at M&amp;H Boutique Hotel, beside the pool" style="object-position:40% 45%" loading="lazy"></div>
+      <div class="acc-body">
+        <div class="acc-beds"><svg viewBox="0 0 30 22" aria-hidden="true"><path d="M2 20V3M28 20V3M2 14h26M2 10.5h26"/><rect x="4.5" y="5.5" width="9" height="5" rx="1.2"/><rect x="16.5" y="5.5" width="9" height="5" rx="1.2"/></svg></div>
         <h3>Studios</h3>
-        <svg class="chev" viewBox="0 0 14 21" aria-hidden="true"><path d="M3 2.5l8 8-8 8" fill="none" stroke="#c8c8c8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <p class="price">From $80/night</p>
-      </a>
-      <a class="room-card" href="accommodation.html#one-bedroom">
-        <div class="ph" style="aspect-ratio:287/199"><img src="assets/images/661b48ffe552a0b518bd520833e53206.jpg" alt="1 Bedroom" style="left:0.00%;top:-45.73%;width:100.00%;height:192.46%" loading="lazy"></div>
-        <p class="info" style="font-weight:600">Max 2 guest, 1 Queen bed.</p>
-        <div class="beds"><svg viewBox="0 0 30 22" fill="none" stroke="#fff" stroke-width="1.6" aria-hidden="true"><path d="M2 20V3M28 20V3M2 14h26M2 10.5h26"/><rect x="4.5" y="5.5" width="9" height="5" rx="1.2"/><rect x="16.5" y="5.5" width="9" height="5" rx="1.2"/></svg></div>
+        <p class="acc-info">Max 2 guests, 1 bed. Bed and breakfast included, with a balcony looking over the pool and the sunset.</p>
+        <p class="acc-price">From <strong>$80</strong> / night</p>
+        <span class="acc-more">See the photos <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+      </div>
+    </a>
+    <a class="acc-card" href="accommodation.html#one-bedroom" data-room-gallery="gallery-one" aria-haspopup="dialog">
+      <div class="acc-photo"><img src="assets/images/661b48ffe552a0b518bd520833e53206.jpg" alt="The one bedroom house" style="object-position:50% 55%" loading="lazy"></div>
+      <div class="acc-body">
+        <div class="acc-beds"><svg viewBox="0 0 30 22" aria-hidden="true"><path d="M2 20V3M28 20V3M2 14h26M2 10.5h26"/><rect x="4.5" y="5.5" width="9" height="5" rx="1.2"/><rect x="16.5" y="5.5" width="9" height="5" rx="1.2"/></svg></div>
         <h3>1 Bedroom</h3>
-        <svg class="chev" viewBox="0 0 14 21" aria-hidden="true"><path d="M3 2.5l8 8-8 8" fill="none" stroke="#c8c8c8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <p class="price">From $95/night</p>
-      </a>
-      <a class="room-card" href="accommodation.html#two-bedroom">
-        <div class="ph" style="aspect-ratio:285/199"><img src="assets/images/17254d02a615ac41cd992921decb5b8c.png" alt="2 Bedroom" style="left:0.00%;top:-59.30%;width:100.00%;height:191.46%" loading="lazy"></div>
-        <p class="info" style="font-weight:600">Max 4 Guests, 2 Queen beds.</p>
-        <div class="beds"><svg viewBox="0 0 30 22" fill="none" stroke="#fff" stroke-width="1.6" aria-hidden="true"><path d="M2 20V3M28 20V3M2 14h26M2 10.5h26"/><rect x="4.5" y="5.5" width="9" height="5" rx="1.2"/><rect x="16.5" y="5.5" width="9" height="5" rx="1.2"/></svg><svg viewBox="0 0 30 22" fill="none" stroke="#fff" stroke-width="1.6" aria-hidden="true"><path d="M2 20V3M28 20V3M2 14h26M2 10.5h26"/><rect x="4.5" y="5.5" width="9" height="5" rx="1.2"/><rect x="16.5" y="5.5" width="9" height="5" rx="1.2"/></svg></div>
+        <p class="acc-info">Max 2 guests, 1 Queen bed. Open kitchen and an en-suite bedroom.</p>
+        <p class="acc-price">From <strong>$95</strong> / night</p>
+        <span class="acc-more">See the photos <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+      </div>
+    </a>
+    <a class="acc-card" href="accommodation.html#two-bedroom" data-room-gallery="gallery-two" aria-haspopup="dialog">
+      <div class="acc-photo"><img src="assets/images/17254d02a615ac41cd992921decb5b8c.png" alt="The two bedroom house" style="object-position:50% 62%" loading="lazy"></div>
+      <div class="acc-body">
+        <div class="acc-beds"><svg viewBox="0 0 30 22" aria-hidden="true"><path d="M2 20V3M28 20V3M2 14h26M2 10.5h26"/><rect x="4.5" y="5.5" width="9" height="5" rx="1.2"/><rect x="16.5" y="5.5" width="9" height="5" rx="1.2"/></svg><svg viewBox="0 0 30 22" aria-hidden="true"><path d="M2 20V3M28 20V3M2 14h26M2 10.5h26"/><rect x="4.5" y="5.5" width="9" height="5" rx="1.2"/><rect x="16.5" y="5.5" width="9" height="5" rx="1.2"/></svg></div>
         <h3>2 Bedroom</h3>
-        <svg class="chev" viewBox="0 0 14 21" aria-hidden="true"><path d="M3 2.5l8 8-8 8" fill="none" stroke="#c8c8c8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <p class="price">From $125/night</p>
-      </a>
-      <a class="room-card" href="accommodation.html#three-bedroom">
-        <div class="ph" style="aspect-ratio:286/200"><img src="assets/images/f4947ec963576949c61c98bfd77a73f9.jpg" alt="3 Bedroom" style="left:-132.17%;top:-120.00%;width:318.53%;height:341.50%" loading="lazy"></div>
-        <p class="info" style="font-weight:600">Max 6 Guests, 2 Queen beds &amp; 1 double.</p>
-        <div class="beds"><svg viewBox="0 0 30 22" fill="none" stroke="#fff" stroke-width="1.6" aria-hidden="true"><path d="M2 20V3M28 20V3M2 14h26M2 10.5h26"/><rect x="4.5" y="5.5" width="9" height="5" rx="1.2"/><rect x="16.5" y="5.5" width="9" height="5" rx="1.2"/></svg><svg viewBox="0 0 30 22" fill="none" stroke="#fff" stroke-width="1.6" aria-hidden="true"><path d="M2 20V3M28 20V3M2 14h26M2 10.5h26"/><rect x="4.5" y="5.5" width="9" height="5" rx="1.2"/><rect x="16.5" y="5.5" width="9" height="5" rx="1.2"/></svg><svg viewBox="0 0 30 22" fill="none" stroke="#fff" stroke-width="1.6" aria-hidden="true"><path d="M2 20V3M28 20V3M2 14h26M2 10.5h26"/><rect x="4.5" y="5.5" width="9" height="5" rx="1.2"/><rect x="16.5" y="5.5" width="9" height="5" rx="1.2"/></svg></div>
+        <p class="acc-info">Max 4 guests, 2 Queen beds. Open kitchen and a sitting room with TV.</p>
+        <p class="acc-price">From <strong>$125</strong> / night</p>
+        <span class="acc-more">See the photos <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+      </div>
+    </a>
+    <a class="acc-card" href="accommodation.html#three-bedroom" data-room-gallery="gallery-three" aria-haspopup="dialog">
+      <div class="acc-photo"><img src="assets/images/three-bedroom.jpg" alt="The three bedroom house" style="object-position:50% 50%" loading="lazy"></div>
+      <div class="acc-body">
+        <div class="acc-beds"><svg viewBox="0 0 30 22" aria-hidden="true"><path d="M2 20V3M28 20V3M2 14h26M2 10.5h26"/><rect x="4.5" y="5.5" width="9" height="5" rx="1.2"/><rect x="16.5" y="5.5" width="9" height="5" rx="1.2"/></svg><svg viewBox="0 0 30 22" aria-hidden="true"><path d="M2 20V3M28 20V3M2 14h26M2 10.5h26"/><rect x="4.5" y="5.5" width="9" height="5" rx="1.2"/><rect x="16.5" y="5.5" width="9" height="5" rx="1.2"/></svg><svg viewBox="0 0 30 22" aria-hidden="true"><path d="M2 20V3M28 20V3M2 14h26M2 10.5h26"/><rect x="4.5" y="5.5" width="9" height="5" rx="1.2"/><rect x="16.5" y="5.5" width="9" height="5" rx="1.2"/></svg></div>
         <h3>3 Bedroom</h3>
-        <svg class="chev" viewBox="0 0 14 21" aria-hidden="true"><path d="M3 2.5l8 8-8 8" fill="none" stroke="#c8c8c8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <p class="price">From $155/night</p>
-      </a>
+        <p class="acc-info">Max 6 guests, 2 Queen beds &amp; 1 double. En-suite master bedroom.</p>
+        <p class="acc-price">From <strong>$155</strong> / night</p>
+        <span class="acc-more">See the photos <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+      </div>
+    </a>
+    </div>
   </div>
 </section>
 
-<section class="section villa">
-  <div class="villa-box">
-    <div class="ph bg-photo" style="aspect-ratio:1366/430"><img src="assets/images/691f63b3158208d5e4cfb4bf354e788d.jpg" alt="" style="left:0.00%;top:-68.14%;width:100.00%;height:238.14%" loading="lazy"></div>
-    <h2 class="abs heading-xl">More than a villa</h2>
-    <p class="abs">We offer more than houses and rooms. From a bar to a restaurant we offer confornt,<br>
-privacy and an experient to remember.</p>
+<section class="section villa" aria-labelledby="villa-title">
+  <img class="villa-photo" src="assets/images/023465f1c769bf05f1beb4fcbf06a841.jpg" alt="" loading="lazy">
+  <div class="villa-band">
+    <h2 id="villa-title">More than a villa: an in-house bar and garden restaurant to make every stay worth remembering.</h2>
+    <p>Cocktails on demand <span aria-hidden="true">·</span> homemade food <span aria-hidden="true">·</span> large pool <span aria-hidden="true">·</span> poolside beds <span aria-hidden="true">·</span> free Wi‑Fi &amp; parking</p>
   </div>
 </section>
 
-<section class="section barfood">
-  <div class="ph abs bar-img" style="aspect-ratio:457/343"><img src="assets/images/50f26ce018e3734990c094f4a183dbc6.jpg" alt="The hotel bar" style="left:0.00%;top:0.00%;width:100.00%;height:100.00%" loading="lazy"></div>
-  <p class="abs bar-text">Apart from our beautiful houses, we have a vibrant bar that has all kinds of drinks and cocktails available on demand. The bar is meant for vibes and drinks, music included.</p>
-  <div class="ph abs food-img" style="aspect-ratio:460/341"><img src="assets/images/53abb70d645137b1c379ad800f0c5541.jpg" alt="The garden restaurant" style="left:0.00%;top:-29.91%;width:101.09%;height:182.11%" loading="lazy"></div>
-  <p class="abs food-text">Just like our beautiful houses and vibrant bar, our garden restaurant keeps the standard and our food is mouth watering from local delicacy to international taste we leave you full and happy.</p>
-</section>
-
-<section class="section offers">
-  <h2 class="abs heading-xl">Special offers</h2>
-  <div class="abs offer-cards">
-      <div class="offer-card">
-        <div class="ph" style="aspect-ratio:377/265"><img src="assets/images/629bcca0f681e7893a0d526a3398cba2.jpg" alt="Bed and breakfast" style="left:0.00%;top:-48.30%;width:100.27%;height:190.19%" loading="lazy"></div>
-        <h3>Bed &amp; breakfast</h3>
-        <p>Our studios come with bed and breakfast offer since it’s the only room in the villa without a kitchen available.</p>
+<section class="section sky-section barfood" id="food-drinks" aria-labelledby="barfood-title">
+  <div class="sky-layer" aria-hidden="true">
+    <img class="cirrus cirrus--wisp" src="assets/images/cirrus-wisp.webp" alt="" loading="lazy">
+    <img class="cirrus cirrus--streaks" src="assets/images/cirrus-streaks.webp" alt="" loading="lazy">
+  </div>
+  <div class="barfood-wrap">
+    <header class="barfood-head">
+      <p class="section-eyebrow">Eat &amp; unwind</p>
+      <h2 id="barfood-title">Food &amp; Drinks</h2>
+    </header>
+    <div class="bf-row">
+      <div class="bf-photo"><img src="assets/images/50f26ce018e3734990c094f4a183dbc6.jpg" alt="The hotel bar" loading="lazy"></div>
+      <div class="bf-text">
+        <h3>The bar</h3>
+        <p>Apart from our beautiful houses, we have a vibrant bar that has all kinds of drinks and cocktails available on demand. The bar is meant for vibes and drinks, music included.</p>
       </div>
-      <div class="offer-card">
-        <div class="ph" style="aspect-ratio:377/265"><img src="assets/images/80d8bca4aef71da1a64d1c6b670c0336.jpg" alt="Swimming package" style="left:0.00%;top:0.00%;width:103.18%;height:109.81%" loading="lazy"></div>
-        <h3>Swimming package</h3>
-        <p>All our guests swim for free and 1000 redeemable for non-Guests and anybody that spends 5000 at the bar get to swim for free as well.</p>
+    </div>
+    <div class="bf-row bf-row--flip">
+      <div class="bf-photo"><img src="assets/images/53abb70d645137b1c379ad800f0c5541.jpg" alt="The garden restaurant" style="object-position:50% 40%" loading="lazy"></div>
+      <div class="bf-text">
+        <h3>The garden restaurant</h3>
+        <p>Just like our beautiful houses and vibrant bar, our garden restaurant keeps the standard and our food is mouth watering from local delicacy to international taste we leave you full and happy.</p>
       </div>
-      <div class="offer-card">
-        <div class="ph" style="aspect-ratio:377/265"><img src="assets/images/9e571cf47b6f820f99f7759b39f8a56c.jpg" alt="Parking and transport" style="left:-14.59%;top:-2.64%;width:119.36%;height:127.17%" loading="lazy"></div>
-        <h3>Parking &amp; transport</h3>
-        <p>Apart from the free parking any of our guests can request for transportation.</p>
-      </div>
+    </div>
+    <a class="read-more" href="food-drinks.html#menu">See the full menu <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
   </div>
 </section>
 
-<section class="section guests">
-  <h2 class="abs heading-xl">What our guests say</h2>
-  <div class="abs quote-cards">
-      <div class="quote-card">
-        <blockquote>“M&amp;H Boutique Hotel is pure magic. From the moment we arrived, we were greeted like family. The pool area was a serene haven, and our three-bedroom apartment had breathtaking views. The staff went above and beyond — I can’t wait to return!”</blockquote>
-        <p class="who">— Sarah L.</p>
-        <p class="from">United Kingdom</p>
-      </div>
-      <div class="quote-card">
-        <blockquote>“We wanted a quiet escape from the city, and this was perfection. The combination of luxury, privacy, and Kenyan coastal charm was unmatched. The seafood dishes at the terrace were simply divine.”</blockquote>
-        <p class="who">— David &amp; Aisha K.</p>
-        <p class="from">Nairobi, Kenya</p>
-      </div>
-      <div class="quote-card">
-        <blockquote>“The perfect blend of elegance and authenticity. Every corner of the property felt like it was designed for relaxation. The staff remembered our names and even our favorite drinks — truly five-star service in a boutique setting.”</blockquote>
-        <p class="who">— Jasmeet Kaur</p>
-        <p class="from">Unied States</p>
-      </div>
+<section class="section sky-section guests" aria-labelledby="guests-title">
+  <div class="sky-layer" aria-hidden="true">
+    <img class="cirrus cirrus--wisp" src="assets/images/cirrus-wisp.webp" alt="" loading="lazy">
+    <img class="cirrus cirrus--streaks" src="assets/images/cirrus-streaks.webp" alt="" loading="lazy">
   </div>
-  <a class="abs read-more" href="reviews.html">READ MORE</a>
+  <div class="guests-wrap">
+  <header class="guests-head">
+    <p class="section-eyebrow">Testimonials</p>
+    <h2 id="guests-title">What our guests say</h2>
+    <p class="guests-sub">Real reviews from our Google Business Profile</p>
+  </header>
+  <div class="quote-cards">
+      <figure class="quote-card quote-card--short">
+        <p class="trip-tags">Business <span aria-hidden="true">·</span> Solo</p>
+        <blockquote>Lovely, peaceful and crispy clean! A home away from home type of place.</blockquote>
+        <figcaption class="reviewer">
+          <img src="assets/images/Jean.png" alt="" width="48" height="48" loading="lazy">
+          <span><span class="who">Jean Eudes Nsabiye</span><span class="from"><span class="stars" role="img" aria-label="Rated 5 out of 5">★★★★★</span> Google review</span></span>
+        </figcaption>
+      </figure>
+      <figure class="quote-card">
+        <p class="trip-tags">Holiday <span aria-hidden="true">·</span> Family</p>
+        <blockquote>
+          <p>For the solo travellers, girl trips, groups, team buildings, remote worker or a couple get away this place will recharge you, help you relax and create new memories.</p>
+          <p>The service is great, food freshly made, ambient and great views.</p>
+        </blockquote>
+        <figcaption class="reviewer">
+          <img src="assets/images/ngina.png" alt="" width="48" height="48" loading="lazy">
+          <span><span class="who">Ngina Attracta</span><span class="from"><span class="stars" role="img" aria-label="Rated 5 out of 5">★★★★★</span> Local Guide <span aria-hidden="true">·</span> Google review</span></span>
+        </figcaption>
+      </figure>
+  </div>
+  <a class="read-more" href="https://share.google/hauwKACoPQos9Qvp8" target="_blank" rel="noopener">See all our reviews on Google <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+  </div>
 </section>
 
-<section class="section home-closing">
-  <div class="band">
-    <div class="ph bg-photo" style="aspect-ratio:1440/302"><img src="assets/images/dbb8205d860a53c20c1c3ca3fc21999a.jpg" alt="" style="left:0.00%;top:-340.07%;width:100.00%;height:635.76%" loading="lazy"></div>
-    <img class="abs center-x logo" src="assets/images/logo.png" alt="M&amp;H Boutique Hotel">
+<section class="section faq" id="faq" aria-labelledby="faq-title">
+  <div class="faq-wrap">
+    <header class="faq-head">
+      <p class="faq-eyebrow">Good to know</p>
+      <h2 id="faq-title">Frequently asked questions</h2>
+    </header>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">Where is M&amp;H Boutique Hotel located?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1">
+          <div class="faq-a-inner">
+            <p>We are located in Diani, Kwale, Kenya (Kinondo ward), close to Green Garden Academy. It's a quiet, private spot just outside the lively village of Diani.</p>
+            <a class="faq-link" href="https://www.google.com/maps/place/M%26H+Boutique+Hotel/@-4.3726463,39.5265662,17z/data=!4m20!1m10!3m9!1s0x18404d8eb2628c39:0x6f411917913b250e!2sM%26H+Boutique+Hotel!5m2!4m1!1i2!8m2!3d-4.3723307!4d39.5253217!16s%2Fg%2F11zbksnlnq!3m8!1s0x18404d8eb2628c39:0x6f411917913b250e!5m2!4m1!1i2!8m2!3d-4.3723307!4d39.5253217!16s%2Fg%2F11zbksnlnq?entry=ttu" target="_blank" rel="noopener">Open in Google Maps <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">How much does a stay cost?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2">
+          <div class="faq-a-inner">
+            <p>Our nightly rates start from:</p>
+            <ul class="faq-prices">
+              <li><span>Studio (bed &amp; breakfast)</span><strong>$80</strong></li>
+              <li><span>1 Bedroom house</span><strong>$95</strong></li>
+              <li><span>2 Bedroom house</span><strong>$125</strong></li>
+              <li><span>3 Bedroom house</span><strong>$155</strong></li>
+            </ul>
+            <a class="faq-link" href="accommodation.html">See the rooms <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">Do you offer transportation?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3">
+          <div class="faq-a-inner">
+            <p>Yes. Any of our guests can request transportation, just let us know when you book or during your stay.</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-acts" id="faq-q-acts">What activities can you arrange?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a-acts" role="region" aria-labelledby="faq-q-acts">
+          <div class="faq-a-inner">
+            <p>Our reception can book all of these for you. Just ask when you arrive.</p>
+            <ul class="faq-acts">
+              <li><span>On the water</span>Kite surfing, sailing, snorkelling, deep-sea fishing</li>
+              <li><span>On land</span>Golf (15 minutes away), safaris</li>
+              <li><span>Day trips</span>Wasini Island, Mombasa Old Town</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">Is breakfast included?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4">
+          <div class="faq-a-inner">
+            <p>Breakfast is included with our studios, since they are the only rooms in the villa without a kitchen. The 1, 2 and 3 bedroom houses each have their own kitchen.</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-dine" id="faq-q-dine">Can I eat at any time of day?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a-dine" role="region" aria-labelledby="faq-q-dine">
+          <div class="faq-a-inner">
+            <p>Yes. Our kitchen is open all day for breakfast, lunch and dinner, and the bar serves drinks and cocktails on the terrace.</p>
+            <a class="faq-link" href="food-drinks.html#menu">See the full menu <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">Can I use the swimming pool?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5">
+          <div class="faq-a-inner">
+            <p>Yes. All our guests swim for free. Non-guests can swim for KSh 1,000, and anyone who spends KSh 5,000 at the bar gets to swim for free as well.</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a6" id="faq-q6">Is there parking?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a6" role="region" aria-labelledby="faq-q6">
+          <div class="faq-a-inner">
+            <p>Yes. Parking is free for all our guests.</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-wifi" id="faq-q-wifi">Is there Wi-Fi?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a-wifi" role="region" aria-labelledby="faq-q-wifi">
+          <div class="faq-a-inner">
+            <p>Yes. Wi-Fi is free for all guests across the property.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <h2 class="abs">A stay worth every cent</h2>
 </section>
 </main>
 <footer class="site-footer">
+  <section class="footer-cta sky-section" id="reserve" aria-labelledby="reserve-title">
+    <div class="sky-layer" aria-hidden="true">
+      <img class="cirrus cirrus--wisp" src="assets/images/cirrus-wisp.webp" alt="" loading="lazy">
+      <img class="cirrus cirrus--streaks" src="assets/images/cirrus-streaks.webp" alt="" loading="lazy">
+    </div>
+    <div class="footer-cta-inner">
+      <p class="footer-cta-eyebrow">Book direct</p>
+      <h2 id="reserve-title">Reserve your spot</h2>
+      <p class="footer-cta-lead">Choose your studio or house and book directly with us. Your room is reserved in just a few steps.</p>
+      <a class="footer-cta-btn" href="accommodation.html">Book now</a>
+      <p class="footer-cta-perks">Free parking <span aria-hidden="true">·</span> free pool for guests <span aria-hidden="true">·</span> breakfast with every studio</p>
+    </div>
+  </section>
   <div class="footer-rule"></div>
-  <div class="footer-cols">
-    <div>
-      <h4>Location</h4>
-      <p>we are located in Mombasa, Diani (Kinondo ward)<br>
-close to green garden accademy.</p>
-      <a class="maps" href="https://www.google.com/maps/place/M%26H+Boutique+Hotel/@-4.3726463,39.5265662,17z/data=!4m20!1m10!3m9!1s0x18404d8eb2628c39:0x6f411917913b250e!2sM%26H+Boutique+Hotel!5m2!4m1!1i2!8m2!3d-4.3723307!4d39.5253217!16s%2Fg%2F11zbksnlnq!3m8!1s0x18404d8eb2628c39:0x6f411917913b250e!5m2!4m1!1i2!8m2!3d-4.3723307!4d39.5253217!16s%2Fg%2F11zbksnlnq?entry=ttu" target="_blank" rel="noopener">Google maps pin</a>
-      <div class="contacts">
-        <h4>Contacts</h4>
-        <a class="contact-line" href="tel:+254110766432">+254 110766432</a>
-        <a class="contact-line" href="mailto:mandhboutiquehotel@gmail.com">mandhboutiquehotel@gmail.com</a>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a href="index.html" aria-label="M&amp;H Boutique Hotel, home"><img src="assets/images/logo-h.png" alt="M&amp;H Boutique Hotel" width="855" height="274" loading="lazy"></a>
+      <p>A peaceful boutique villa with private houses, a pool, a bar and a garden restaurant in Diani.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Visit us</h4>
+      <p>Kinondo, Diani<br>Near Green Garden Academy</p>
+      <a class="footer-arrow" href="https://www.google.com/maps/place/M%26H+Boutique+Hotel/@-4.3726463,39.5265662,17z/data=!4m20!1m10!3m9!1s0x18404d8eb2628c39:0x6f411917913b250e!2sM%26H+Boutique+Hotel!5m2!4m1!1i2!8m2!3d-4.3723307!4d39.5253217!16s%2Fg%2F11zbksnlnq!3m8!1s0x18404d8eb2628c39:0x6f411917913b250e!5m2!4m1!1i2!8m2!3d-4.3723307!4d39.5253217!16s%2Fg%2F11zbksnlnq?entry=ttu" target="_blank" rel="noopener">Get directions <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a class="footer-contact" href="tel:+254110766432">+254 110 766 432</a>
+      <a class="footer-contact" href="mailto:mandhboutiquehotel@gmail.com">mandhboutiquehotel@gmail.com</a>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/mandh_boutique_hotel/" target="_blank" rel="noopener" aria-label="M&amp;H Boutique Hotel on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.15" fill="currentColor"/></svg></a>
+        <a href="https://www.tiktok.com/@mandhboutiquehotel" target="_blank" rel="noopener" aria-label="M&amp;H Boutique Hotel on TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.6 3h-3.1v12.2a2.7 2.7 0 1 1-2.7-2.7c.3 0 .6 0 .9.1V9.4a5.9 5.9 0 1 0 5 5.8V9a7.4 7.4 0 0 0 4.3 1.4V7.3A4.4 4.4 0 0 1 16.6 3z"/></svg></a>
       </div>
     </div>
-    <div class="footer-links">
-      <h4>Links</h4>
-      <a href="index.html">Home</a>
-      <a href="accommodation.html">Accommodation</a>
-      <a href="services-activities.html">Services and Activities</a>
-      <a href="food-drinks.html">Food and Drinks</a>
-      <a href="about-us.html">About us</a>
-      <a href="book-now.html">Book Now</a>
-      <a href="gallery.html">Picture gallery</a>
-    </div>
-    <div>
-      <h4>Our social</h4>
-      <!-- TODO: add the hotel's real social media profile links (the Canva site has none yet) -->
-      <div class="socials">
-        <a href="#" aria-label="Facebook"><svg viewBox="0 0 25 25" aria-hidden="true"><circle cx="12.5" cy="12.5" r="11.6" fill="none" stroke="#fff" stroke-width="1.3"/><path d="M13.6 20v-6.4h2.2l.3-2.5h-2.5V9.5c0-.7.2-1.2 1.3-1.2h1.3V6.1c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3v1.8H9v2.5h2.1V20z" fill="#fff"/></svg></a>
-        <a href="#" aria-label="Instagram"><svg viewBox="0 0 25 25" aria-hidden="true"><rect x="1.2" y="1.2" width="22.6" height="22.6" rx="6.5" fill="none" stroke="#fff" stroke-width="2"/><circle cx="12.5" cy="12.5" r="5.2" fill="none" stroke="#fff" stroke-width="2"/><circle cx="18.9" cy="6.1" r="1.4" fill="#fff"/></svg></a>
-        <a href="#" aria-label="TikTok"><svg viewBox="0 0 25 25" aria-hidden="true"><circle cx="12.5" cy="12.5" r="12.5" fill="#000"/><path d="M14.6 5.5h2.3c.2 1.7 1.3 2.9 3 3.1v2.4c-1.1 0-2.1-.3-3-.9v4.6c0 2.5-2 4.4-4.5 4.4S8 17.2 8 14.8s2-4.4 4.5-4.4c.2 0 .5 0 .7.1v2.5c-.2-.1-.5-.1-.7-.1-1 0-1.9.8-1.9 1.9s.9 1.9 1.9 1.9 2.1-.8 2.1-2z" fill="#fff"/></svg></a>
-      </div>
-    </div>
+    <nav class="footer-col" aria-label="Footer">
+      <h4>Explore</h4>
+      <ul class="footer-nav">
+        <li><a href="accommodation.html">Accommodation</a></li>
+        <li><a href="food-drinks.html">Food &amp; Drinks</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span class="footer-year">2026</span> M&amp;H Boutique Hotel</p>
+    <a class="footer-arrow" href="accommodation.html">Book your stay <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
   </div>
 </footer>
+<dialog class="room-gallery" id="gallery-studios" aria-labelledby="gallery-studios-title">
+  <div class="rg-panel">
+    <header class="rg-head">
+      <div>
+        <p class="rg-eyebrow">Take a look inside</p>
+        <h2 id="gallery-studios-title">Studios</h2>
+      </div>
+      <button class="rg-close" type="button" aria-label="Close photos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+    <div class="rg-stage" aria-roledescription="carousel" aria-label="Studios photos">
+      <div class="rg-track">
+        <figure class="rg-slide"><img data-src="assets/images/2985c23bfe01b9428196220fec3acae5.jpg" alt="The studios, upstairs and downstairs, beside the pool"><figcaption>The studios, upstairs and downstairs, beside the pool</figcaption></figure>
+        <figure class="rg-slide"><img data-src="assets/images/d95a255e7ba1570403da1e9bc095d028.jpg" alt="A fresh, comfortable bed in every studio"><figcaption>A fresh, comfortable bed in every studio</figcaption></figure>
+        <figure class="rg-slide"><img data-src="assets/images/4914f67b0f633942733f4e4cc954b13a.jpg" alt="Flatscreen TV and a door opening out to the pool"><figcaption>Flatscreen TV and a door opening out to the pool</figcaption></figure>
+        <figure class="rg-slide"><img data-src="assets/images/1fd4ef676f9e98caedd9ea0f3e3eeedc.jpg" alt="Your own sitting area by the balcony"><figcaption>Your own sitting area by the balcony</figcaption></figure>
+        <figure class="rg-slide"><img data-src="assets/images/c89a6e5c2a1f845dcf492004df71847a.jpg" alt="A modern en-suite shower room"><figcaption>A modern en-suite shower room</figcaption></figure>
+        <figure class="rg-slide"><img data-src="assets/images/18f6525e96999387614866199952e11b.jpg" alt="The view over the garden and pool"><figcaption>The view over the garden and pool</figcaption></figure>
+      </div>
+      <button class="rg-nav rg-prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="rg-nav rg-next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      <p class="rg-count" aria-live="polite"><span class="rg-now">1</span> / 6</p>
+    </div>
+    <div class="rg-thumbs">
+        <button class="rg-thumb" type="button" aria-label="Photo 1: The studios, upstairs and downstairs, beside the pool"><img data-src="assets/images/2985c23bfe01b9428196220fec3acae5.jpg" alt=""></button>
+        <button class="rg-thumb" type="button" aria-label="Photo 2: A fresh, comfortable bed in every studio"><img data-src="assets/images/d95a255e7ba1570403da1e9bc095d028.jpg" alt=""></button>
+        <button class="rg-thumb" type="button" aria-label="Photo 3: Flatscreen TV and a door opening out to the pool"><img data-src="assets/images/4914f67b0f633942733f4e4cc954b13a.jpg" alt=""></button>
+        <button class="rg-thumb" type="button" aria-label="Photo 4: Your own sitting area by the balcony"><img data-src="assets/images/1fd4ef676f9e98caedd9ea0f3e3eeedc.jpg" alt=""></button>
+        <button class="rg-thumb" type="button" aria-label="Photo 5: A modern en-suite shower room"><img data-src="assets/images/c89a6e5c2a1f845dcf492004df71847a.jpg" alt=""></button>
+        <button class="rg-thumb" type="button" aria-label="Photo 6: The view over the garden and pool"><img data-src="assets/images/18f6525e96999387614866199952e11b.jpg" alt=""></button>
+    </div>
+    <div class="rg-about">
+      <p class="rg-facts">Max 2 guests <span aria-hidden="true">·</span> 1 bed <span aria-hidden="true">·</span> Bed &amp; breakfast</p>
+      <p class="rg-desc">Our studios come with bed and breakfast. Each one has a flatscreen TV with a Netflix account for entertainment, a mini fridge, a hot water kettle for your morning coffee or tea, and a safe for your valuables. The balcony has a beautiful view of the pool and the sunset.</p>
+      <ul class="rg-amenities">
+          <li>Breakfast included</li>
+          <li>Netflix TV</li>
+          <li>Mini fridge</li>
+          <li>Kettle</li>
+          <li>In-room safe</li>
+          <li>Pool &amp; sunset balcony</li>
+      </ul>
+    </div>
+    <div class="rg-book">
+      <p class="rg-price">From <strong>$80</strong> / night</p>
+      <a class="rg-cta" href="accommodation.html?room=studio">Book now</a>
+    </div>
+  </div>
+</dialog>
+<dialog class="room-gallery" id="gallery-one" aria-labelledby="gallery-one-title">
+  <div class="rg-panel">
+    <header class="rg-head">
+      <div>
+        <p class="rg-eyebrow">Take a look inside</p>
+        <h2 id="gallery-one-title">1 Bedroom house</h2>
+      </div>
+      <button class="rg-close" type="button" aria-label="Close photos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+    <div class="rg-stage" aria-roledescription="carousel" aria-label="1 Bedroom house photos">
+      <div class="rg-track">
+        <figure class="rg-slide"><img data-src="assets/images/661b48ffe552a0b518bd520833e53206.jpg" alt="Your private one bedroom house in the garden"><figcaption>Your private one bedroom house in the garden</figcaption></figure>
+        <figure class="rg-slide"><img data-src="assets/images/e9b8dd192b5c07cb3d9728876b14229d.jpg" alt="A bright sitting room with Netflix TV"><figcaption>A bright sitting room with Netflix TV</figcaption></figure>
+        <figure class="rg-slide"><img data-src="assets/images/65901cfc02d4f8b853c3056ecbad6d83.jpg" alt="An open kitchen for guests who like to cook"><figcaption>An open kitchen for guests who like to cook</figcaption></figure>
+        <figure class="rg-slide"><img data-src="assets/images/c8a9076d49ba08f1c31ef9dd6fbae5e1.jpg" alt="The Queen bedroom"><figcaption>The Queen bedroom</figcaption></figure>
+        <figure class="rg-slide"><img data-src="assets/images/56b1b434136370287b8585448ab6c5bc.jpg" alt="The en-suite shower room"><figcaption>The en-suite shower room</figcaption></figure>
+        <figure class="rg-slide"><img data-src="assets/images/41067cb14434179882c65c8aa7aa1dc5.jpg" alt="The veranda, a few steps from the pool"><figcaption>The veranda, a few steps from the pool</figcaption></figure>
+      </div>
+      <button class="rg-nav rg-prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="rg-nav rg-next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      <p class="rg-count" aria-live="polite"><span class="rg-now">1</span> / 6</p>
+    </div>
+    <div class="rg-thumbs">
+        <button class="rg-thumb" type="button" aria-label="Photo 1: Your private one bedroom house in the garden"><img data-src="assets/images/661b48ffe552a0b518bd520833e53206.jpg" alt=""></button>
+        <button class="rg-thumb" type="button" aria-label="Photo 2: A bright sitting room with Netflix TV"><img data-src="assets/images/e9b8dd192b5c07cb3d9728876b14229d.jpg" alt=""></button>
+        <button class="rg-thumb" type="button" aria-label="Photo 3: An open kitchen for guests who like to cook"><img data-src="assets/images/65901cfc02d4f8b853c3056ecbad6d83.jpg" alt=""></button>
+        <button class="rg-thumb" type="button" aria-label="Photo 4: The Queen bedroom"><img data-src="assets/images/c8a9076d49ba08f1c31ef9dd6fbae5e1.jpg" alt=""></button>
+        <button class="rg-thumb" type="button" aria-label="Photo 5: The en-suite shower room"><img data-src="assets/images/56b1b434136370287b8585448ab6c5bc.jpg" alt=""></button>
+        <button class="rg-thumb" type="button" aria-label="Photo 6: The veranda, a few steps from the pool"><img data-src="assets/images/41067cb14434179882c65c8aa7aa1dc5.jpg" alt=""></button>
+    </div>
+    <div class="rg-about">
+      <p class="rg-facts">Max 2 guests <span aria-hidden="true">·</span> 1 Queen bed <span aria-hidden="true">·</span> En-suite bedroom</p>
+      <p class="rg-desc">Our one bedroom house has an open kitchen with a fridge, microwave and toaster for guests who prefer to cook for themselves. The sitting room has a TV with Netflix for entertainment, the bedroom is en suite, and the balcony overlooks the swimming pool.</p>
+      <ul class="rg-amenities">
+          <li>Open kitchen</li>
+          <li>Fridge, microwave &amp; toaster</li>
+          <li>Netflix TV</li>
+          <li>En-suite bedroom</li>
+          <li>Pool-view balcony</li>
+      </ul>
+    </div>
+    <div class="rg-book">
+      <p class="rg-price">From <strong>$95</strong> / night</p>
+      <a class="rg-cta" href="accommodation.html?room=one">Book now</a>
+    </div>
+  </div>
+</dialog>
+<dialog class="room-gallery" id="gallery-two" aria-labelledby="gallery-two-title">
+  <div class="rg-panel">
+    <header class="rg-head">
+      <div>
+        <p class="rg-eyebrow">Take a look inside</p>
+        <h2 id="gallery-two-title">2 Bedroom house</h2>
+      </div>
+      <button class="rg-close" type="button" aria-label="Close photos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+    <div class="rg-stage" aria-roledescription="carousel" aria-label="2 Bedroom house photos">
+      <div class="rg-track">
+        <figure class="rg-slide"><img data-src="assets/images/17254d02a615ac41cd992921decb5b8c.png" alt="The two bedroom house at sunset"><figcaption>The two bedroom house at sunset</figcaption></figure>
+        <figure class="rg-slide"><img data-src="assets/images/0c6e8169ad8847b1c4df9a3cc970d270.jpg" alt="A spacious sitting room with Netflix TV"><figcaption>A spacious sitting room with Netflix TV</figcaption></figure>
+        <figure class="rg-slide"><img data-src="assets/images/0704de1acb7d78b37644c3c51700fa38.jpg" alt="Open kitchen and dining table"><figcaption>Open kitchen and dining table</figcaption></figure>
+        <figure class="rg-slide"><img data-src="assets/images/19d788837d9b36e9adc173745824f212.jpg" alt="One of the two Queen bedrooms"><figcaption>One of the two Queen bedrooms</figcaption></figure>
+        <figure class="rg-slide"><img data-src="assets/images/02c64264c1d1eb8edda57ec5a5726deb.jpg" alt="A modern shower room"><figcaption>A modern shower room</figcaption></figure>
+        <figure class="rg-slide"><img data-src="assets/images/f1b4431375a7d8e01202efabcd6dfd6f.jpg" alt="The veranda and sun loungers outside"><figcaption>The veranda and sun loungers outside</figcaption></figure>
+      </div>
+      <button class="rg-nav rg-prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="rg-nav rg-next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      <p class="rg-count" aria-live="polite"><span class="rg-now">1</span> / 6</p>
+    </div>
+    <div class="rg-thumbs">
+        <button class="rg-thumb" type="button" aria-label="Photo 1: The two bedroom house at sunset"><img data-src="assets/images/17254d02a615ac41cd992921decb5b8c.png" alt=""></button>
+        <button class="rg-thumb" type="button" aria-label="Photo 2: A spacious sitting room with Netflix TV"><img data-src="assets/images/0c6e8169ad8847b1c4df9a3cc970d270.jpg" alt=""></button>
+        <button class="rg-thumb" type="button" aria-label="Photo 3: Open kitchen and dining table"><img data-src="assets/images/0704de1acb7d78b37644c3c51700fa38.jpg" alt=""></button>
+        <button class="rg-thumb" type="button" aria-label="Photo 4: One of the two Queen bedrooms"><img data-src="assets/images/19d788837d9b36e9adc173745824f212.jpg" alt=""></button>
+        <button class="rg-thumb" type="button" aria-label="Photo 5: A modern shower room"><img data-src="assets/images/02c64264c1d1eb8edda57ec5a5726deb.jpg" alt=""></button>
+        <button class="rg-thumb" type="button" aria-label="Photo 6: The veranda and sun loungers outside"><img data-src="assets/images/f1b4431375a7d8e01202efabcd6dfd6f.jpg" alt=""></button>
+    </div>
+    <div class="rg-about">
+      <p class="rg-facts">Max 4 guests <span aria-hidden="true">·</span> 2 Queen beds <span aria-hidden="true">·</span> 2 bathrooms</p>
+      <p class="rg-desc">Our two bedroom house has an open kitchen with a fridge, microwave and toaster for guests who prefer to cook for themselves. The sitting room has a TV with Netflix for entertainment, there are two bathrooms (not en suite), and the balcony overlooks the swimming pool.</p>
+      <ul class="rg-amenities">
+          <li>Open kitchen</li>
+          <li>Fridge, microwave &amp; toaster</li>
+          <li>Netflix TV</li>
+          <li>2 bathrooms</li>
+          <li>Pool-view balcony</li>
+      </ul>
+    </div>
+    <div class="rg-book">
+      <p class="rg-price">From <strong>$125</strong> / night</p>
+      <a class="rg-cta" href="accommodation.html?room=two">Book now</a>
+    </div>
+  </div>
+</dialog>
+<dialog class="room-gallery" id="gallery-three" aria-labelledby="gallery-three-title">
+  <div class="rg-panel">
+    <header class="rg-head">
+      <div>
+        <p class="rg-eyebrow">Take a look inside</p>
+        <h2 id="gallery-three-title">3 Bedroom house</h2>
+      </div>
+      <button class="rg-close" type="button" aria-label="Close photos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+    <div class="rg-stage" aria-roledescription="carousel" aria-label="3 Bedroom house photos">
+      <div class="rg-track">
+        <figure class="rg-slide"><img data-src="assets/images/three-bedroom.jpg" alt="The three bedroom house right by the pool"><figcaption>The three bedroom house right by the pool</figcaption></figure>
+        <figure class="rg-slide"><img data-src="assets/images/454f2f114ee460cfe7786d4cf3da7e3f.jpg" alt="Open-plan living, dining and kitchen"><figcaption>Open-plan living, dining and kitchen</figcaption></figure>
+        <figure class="rg-slide"><img data-src="assets/images/1bd102ea8e337e97369219cf6e036bb7.jpg" alt="A long dining table for the whole group"><figcaption>A long dining table for the whole group</figcaption></figure>
+        <figure class="rg-slide"><img data-src="assets/images/fbb549efdd8e2bf0d2d40a1dc94695eb.jpg" alt="The en-suite master bedroom"><figcaption>The en-suite master bedroom</figcaption></figure>
+        <figure class="rg-slide"><img data-src="assets/images/bbdc27ed1c762eef9b4a54e09193f402.jpg" alt="A modern shower room"><figcaption>A modern shower room</figcaption></figure>
+        <figure class="rg-slide"><img data-src="assets/images/7920f1f53eab623d0adb21bb97979d02.jpg" alt="The veranda overlooking the pool"><figcaption>The veranda overlooking the pool</figcaption></figure>
+      </div>
+      <button class="rg-nav rg-prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="rg-nav rg-next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      <p class="rg-count" aria-live="polite"><span class="rg-now">1</span> / 6</p>
+    </div>
+    <div class="rg-thumbs">
+        <button class="rg-thumb" type="button" aria-label="Photo 1: The three bedroom house right by the pool"><img data-src="assets/images/three-bedroom.jpg" alt=""></button>
+        <button class="rg-thumb" type="button" aria-label="Photo 2: Open-plan living, dining and kitchen"><img data-src="assets/images/454f2f114ee460cfe7786d4cf3da7e3f.jpg" alt=""></button>
+        <button class="rg-thumb" type="button" aria-label="Photo 3: A long dining table for the whole group"><img data-src="assets/images/1bd102ea8e337e97369219cf6e036bb7.jpg" alt=""></button>
+        <button class="rg-thumb" type="button" aria-label="Photo 4: The en-suite master bedroom"><img data-src="assets/images/fbb549efdd8e2bf0d2d40a1dc94695eb.jpg" alt=""></button>
+        <button class="rg-thumb" type="button" aria-label="Photo 5: A modern shower room"><img data-src="assets/images/bbdc27ed1c762eef9b4a54e09193f402.jpg" alt=""></button>
+        <button class="rg-thumb" type="button" aria-label="Photo 6: The veranda overlooking the pool"><img data-src="assets/images/7920f1f53eab623d0adb21bb97979d02.jpg" alt=""></button>
+    </div>
+    <div class="rg-about">
+      <p class="rg-facts">Max 6 guests <span aria-hidden="true">·</span> 2 Queen beds &amp; 1 double <span aria-hidden="true">·</span> En-suite master</p>
+      <p class="rg-desc">Our three bedroom house has an open kitchen with a fridge, microwave and toaster for guests who prefer to cook for themselves. The sitting room has a TV with Netflix for entertainment. There are two bathrooms and a shared guest toilet, the master bedroom is en suite, and the balcony overlooks the swimming pool.</p>
+      <ul class="rg-amenities">
+          <li>Open kitchen</li>
+          <li>Fridge, microwave &amp; toaster</li>
+          <li>Netflix TV</li>
+          <li>En-suite master bedroom</li>
+          <li>2 bathrooms + guest toilet</li>
+          <li>Pool-view balcony</li>
+      </ul>
+    </div>
+    <div class="rg-book">
+      <p class="rg-price">From <strong>$155</strong> / night</p>
+      <a class="rg-cta" href="accommodation.html?room=three">Book now</a>
+    </div>
+  </div>
+</dialog>
 <script src="js/main.js"></script>
 </body>
 </html>
