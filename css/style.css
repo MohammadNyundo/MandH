@@ -133,7 +133,8 @@ main { padding-top: var(--header-h); }
 }
 /* Photo frame: the inner <img> is positioned in % so the crop/zoom matches Canva exactly */
 .ph { position: relative; overflow: hidden; }
-.ph > img { position: absolute; max-width: none; }
+.ph > img, .ph > picture > img { position: absolute; max-width: none; }
+.hero-video { display: none; }
 .abs { position: absolute; }
 .center-x { left: 50%; transform: translateX(-50%); }
 
@@ -1216,26 +1217,19 @@ main { padding-top: var(--header-h); }
   .hero > *:not(.bg-photo) { position: relative; }
   .hero .btn-cta { margin-top: auto; padding: 14px 36px; font-size: 15px; z-index: 1; }
 
-  /* Hero pan: a phone only fits about half of the wide photo, so the photo is sized to the
-     hero's height at its natural 4:3 width and drifts slowly left -> right -> left, letting
-     guests see the whole property (villa, pool, cottages, tree). Uses translate so it runs
-     on the GPU. min-width + cover keep it edge to edge on wide screens, where the pan is 0. */
+  /* Phones: full-screen hero. The poster frame (via <picture>) fills it straight away, then the
+     walk-round video fades in over it once it can play. The fade into the story section stays. */
+  .site-header.overlay ~ main .hero { min-height: 100vh; min-height: 100svh; }
+  .hero .bg-photo { inset: 0; aspect-ratio: auto !important; }
   .hero .bg-photo img {
-    left: 0 !important; top: 0 !important;
-    height: 100% !important; width: auto !important; min-width: 100%;
-    aspect-ratio: 4 / 3; object-fit: cover;
-    transform-origin: 0 50%;
-    animation: hero-pan 14s ease-in-out .5s infinite alternate both;
-    will-change: translate;
+    inset: 0 !important; width: 100% !important; height: 100% !important;
+    object-fit: cover; object-position: 50% 50%; animation: none;
   }
-  @keyframes hero-pan {
-    from { translate: 0 0; }
-    to   { translate: calc(100vw - 100%) 0; }
+  .hero-video {
+    display: block; position: absolute !important; inset: 0; width: 100%; height: 100%;
+    object-fit: cover; opacity: 0; transition: opacity .8s ease; pointer-events: none;
   }
-}
-@media (max-width: 767px) and (prefers-reduced-motion: reduce) {
-  /* No motion: hold still, framed on the pool */
-  .hero .bg-photo img { animation: none; translate: calc((100vw - 100%) * .6) 0; }
+  .hero-video.is-playing { opacity: 1; }
 }
 @media (max-width: 767px) {
 

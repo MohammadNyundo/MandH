@@ -29,7 +29,9 @@
 <main>
 
 <section class="section hero" aria-label="Welcome">
-  <div class="ph bg-photo" style="aspect-ratio:1440/768"><img src="assets/images/hero.jpg" alt="The pool and villas of M&amp;H Boutique Hotel" style="left:-1.53%;top:-24.09%;width:105.28%;height:148.05%"></div>
+  <div class="ph bg-photo" style="aspect-ratio:1440/768"><picture><source media="(max-width: 767px)" srcset="assets/images/hero-mobile-poster.webp" type="image/webp"><img src="assets/images/hero.jpg" alt="The pool and villas of M&amp;H Boutique Hotel" style="left:-1.53%;top:-24.09%;width:105.28%;height:148.05%" fetchpriority="high"></picture></div>
+  <!-- Phones only: js/main.js attaches the sources, so desktop never downloads the video -->
+  <video class="hero-video" muted loop playsinline preload="none" aria-hidden="true" data-av1="assets/video/hero-mobile-av1.mp4" data-mp4="assets/video/hero-mobile.mp4"></video>
   <h1 class="visually-hidden">M&amp;H Boutique Hotel, Diani</h1>
   <a class="abs center-x btn-cta" href="accommodation.html">Book Now</a>
 </section>

@@ -9,6 +9,32 @@
   var FORM_ENDPOINT = "";
   var HOTEL_EMAIL = "mandhboutiquehotel@gmail.com";
 
+  /* ---------- Home hero video (phones only) ----------
+     Sources are attached here rather than in the HTML so desktops, visitors who prefer reduced
+     motion and data-saver users never download it; they keep the still photo. AV1 is offered
+     first (about half the size), H.264 is the fallback every phone can play. */
+  var heroVideo = document.querySelector(".hero-video");
+  if (heroVideo) {
+    var conn = navigator.connection || {};
+    var wantVideo = window.matchMedia("(max-width: 767px)").matches &&
+      !window.matchMedia("(prefers-reduced-motion: reduce)").matches &&
+      !conn.saveData;
+    if (wantVideo) {
+      [["av1", 'video/mp4; codecs="av01.0.05M.10"'], ["mp4", 'video/mp4; codecs="avc1.640028"']].forEach(function (s) {
+        var src = heroVideo.getAttribute("data-" + s[0]);
+        if (!src || !heroVideo.canPlayType(s[1])) return;
+        var el = document.createElement("source");
+        el.src = src; el.type = s[1];
+        heroVideo.appendChild(el);
+      });
+      heroVideo.addEventListener("playing", function () { heroVideo.classList.add("is-playing"); }, { once: true });
+      heroVideo.preload = "auto";
+      heroVideo.load();
+      var p = heroVideo.play();
+      if (p && p.catch) p.catch(function () { /* autoplay blocked: the poster photo stays */ });
+    }
+  }
+
   /* ---------- Mobile navigation ---------- */
   var header = document.querySelector(".site-header");
   var toggle = document.querySelector(".nav-toggle");
