@@ -96,61 +96,9 @@
       return r.unitId === unitId && r.checkIn <= today && today < r.checkOut;
     })[0] || null;
   }
-  function nextStay(unitId, today) {
-    return STORE.getReservations().filter(function (r) { return r.unitId === unitId && r.checkIn > today; })
-      .sort(function (a, b) { return a.checkIn < b.checkIn ? -1 : 1; })[0] || null;
-  }
 
   var board = document.querySelector("[data-unit-board]");
   if (!board) return;
-  var cards = Array.prototype.slice.call(document.querySelectorAll(".unit-card"));
-  var filterBtns = document.querySelectorAll(".unit-filter button");
-  var activeFilter = "all";
-
-  function renderStatus() {
-    var today = todayISO(), vacant = 0;
-    cards.forEach(function (card) {
-      var id = card.getAttribute("data-unit");
-      var stay = currentStay(id, today);
-      var badge = card.querySelector(".unit-status");
-      var note = card.querySelector(".unit-note");
-      card.setAttribute("data-status", stay ? "occupied" : "vacant");
-      if (stay) {
-        badge.textContent = "Occupied";
-        note.textContent = "Until " + shortDate(stay.checkOut) + ", book from then";
-      } else {
-        vacant++;
-        badge.textContent = "Vacant";
-        var nxt = nextStay(id, today);
-        note.textContent = nxt ? "Free until " + shortDate(nxt.checkIn) : "Available tonight";
-      }
-    });
-    var total = cards.length;
-    document.querySelector("[data-count=vacant]").textContent = vacant;
-    document.querySelector("[data-count=total]").textContent = total;
-    document.querySelectorAll("[data-filter-count]").forEach(function (el) {
-      var f = el.getAttribute("data-filter-count");
-      el.textContent = f === "all" ? total : f === "vacant" ? vacant : total - vacant;
-    });
-    applyFilter();
-  }
-  function applyFilter() {
-    cards.forEach(function (c) {
-      c.hidden = !(activeFilter === "all" || c.getAttribute("data-status") === activeFilter);
-    });
-    document.querySelectorAll(".unit-group").forEach(function (g) {
-      g.hidden = !g.querySelector(".unit-card:not([hidden])");
-    });
-    var empty = document.querySelector(".unit-empty");
-    if (empty) empty.hidden = !!document.querySelector(".unit-card:not([hidden])");
-  }
-  filterBtns.forEach(function (b) {
-    b.addEventListener("click", function () {
-      activeFilter = b.getAttribute("data-filter");
-      filterBtns.forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
-      applyFilter();
-    });
-  });
 
   /* ======================= 4. BOOKING MODAL ======================= */
   var dlg = document.getElementById("booking-modal");
@@ -309,7 +257,6 @@
       " (" + n + (n === 1 ? " night" : " nights") + "). Total " + money(res.total) + " by " + res.payment + ".";
     dlg.querySelector("[data-done-warning]").hidden = saved;
     showStep(3);
-    renderStatus();
     dlg.querySelector(".bk-done-close").focus();
   });
 
@@ -394,18 +341,12 @@
   nameInput.addEventListener("blur", function () { setTimeout(hideSuggest, 120); });
 
   /* ---- start ---- */
-  renderStatus();
-  // Re-check status at midnight-ish and when the tab comes back into view.
-  document.addEventListener("visibilitychange", function () { if (!document.hidden) renderStatus(); });
 
   // Deep link from the home page: accommodation.html?room=studio|one|two|three
   var want = new URLSearchParams(location.search).get("room");
   var map = { studio: "studio-1", one: "one-bedroom", two: "two-bedroom", three: "three-bedroom" };
   if (want && map[want]) {
-    var target = want === "studio"
-      ? cards.filter(function (c) { return c.getAttribute("data-unit").indexOf("studio") === 0 && c.getAttribute("data-status") === "vacant"; })[0]
-        || document.querySelector('[data-unit="studio-1"]')
-      : document.querySelector('[data-unit="' + map[want] + '"]');
+    var target = document.querySelector('[data-unit="' + map[want] + '"]');
     if (target) {
       target.scrollIntoView({ block: "center" });
       target.classList.add("highlight");
