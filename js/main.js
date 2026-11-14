@@ -57,8 +57,9 @@
     });
   }
 
-  /* ---------- Home: transparent bar turns solid on scroll ---------- */
-  if (header && header.classList.contains("overlay")) {
+  /* ---------- Header: slims down on scroll (all pages); on Home the transparent bar also
+     turns solid ---------- */
+  if (header) {
     var onScroll = function () { header.classList.toggle("scrolled", window.scrollY > 40); };
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
