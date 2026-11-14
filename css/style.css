@@ -133,7 +133,7 @@ main { padding-top: var(--header-h); }
 }
 /* Photo frame: the inner <img> is positioned in % so the crop/zoom matches Canva exactly */
 .ph { position: relative; overflow: hidden; }
-.ph > img, .ph > picture > img { position: absolute; max-width: none; }
+.ph > img { position: absolute; max-width: none; }
 .abs { position: absolute; }
 .center-x { left: 50%; transform: translateX(-50%); }
 
@@ -1216,16 +1216,28 @@ main { padding-top: var(--header-h); }
   .hero > *:not(.bg-photo) { position: relative; }
   .hero .btn-cta { margin-top: auto; padding: 14px 36px; font-size: 15px; z-index: 1; }
 
-  /* Phones get hero-mobile.jpg (via <picture> in index.html): a portrait crop of the drone
-     shot that shows the villa, pool and gardens in one frame. Fill the hero edge to edge,
-     ignoring the desktop crop set inline on the <img>. */
+  /* Hero pan: a phone only fits about half of the wide photo, so the photo is sized to the
+     hero's height at its natural 4:3 width and drifts slowly left -> right -> left, letting
+     guests see the whole property (villa, pool, cottages, tree). Uses translate so it runs
+     on the GPU. min-width + cover keep it edge to edge on wide screens, where the pan is 0. */
   .hero .bg-photo img {
-    inset: 0 !important; width: 100% !important; height: 100% !important;
-    object-fit: cover; object-position: 50% 40%;
+    left: 0 !important; top: 0 !important;
+    height: 100% !important; width: auto !important; min-width: 100%;
+    aspect-ratio: 4 / 3; object-fit: cover;
+    transform-origin: 0 50%;
+    animation: hero-pan 14s ease-in-out .5s infinite alternate both;
+    will-change: translate;
   }
-  /* Taller than before so the pool clears the Book Now button and the bottom fade */
-  .hero { min-height: min(76svh, 40rem); }
-  .site-header.overlay ~ main .hero::after { height: 3.5rem; }
+  @keyframes hero-pan {
+    from { translate: 0 0; }
+    to   { translate: calc(100vw - 100%) 0; }
+  }
+}
+@media (max-width: 767px) and (prefers-reduced-motion: reduce) {
+  /* No motion: hold still, framed on the pool */
+  .hero .bg-photo img { animation: none; translate: calc((100vw - 100%) * .6) 0; }
+}
+@media (max-width: 767px) {
 
   .acc { padding: 3rem 1.25rem 3.5rem; }
   .acc-wrap { width: auto; }
