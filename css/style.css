@@ -568,17 +568,7 @@ main { padding-top: var(--header-h); }
 .g-chip .g-logo { width: 58%; height: 58%; fill: initial; stroke: none; }
 .avatar { position: relative; flex: none; display: block; }
 .g-chip--badge { position: absolute; right: -.3rem; bottom: -.3rem; width: 1.35rem; height: 1.35rem; }
-.g-rating {
-  display: inline-flex; align-items: center; gap: .6rem; margin-top: 1.25rem;
-  padding: .55rem 1.1rem .55rem .55rem; border-radius: 999px; text-decoration: none;
-  background: rgba(247,250,253,.06); border: 1px solid rgba(91,155,213,.3);
-  font-family: var(--dm); color: #fff; transition: background-color .2s, border-color .2s;
-}
-.g-rating:hover { background: rgba(247,250,253,.12); border-color: rgba(91,155,213,.6); }
-.g-rating strong { font-size: clamp(16px, 1.05rem, 19px); font-weight: 700; }
-.g-rating .stars { margin: 0; }
-.g-count { font-size: clamp(13px, .85rem, 15px); letter-spacing: .04em; color: rgba(247,250,253,.75); }
-.guests .read-more .g-chip { width: 1.6rem; height: 1.6rem; margin-right: .2rem; }
+.guests .read-more .g-chip { width: 1.6rem; height: 1.6rem; }
 .reviewer > span { display: flex; flex-direction: column; }
 .stars { margin-right: .5em; font-size: 1.05em; letter-spacing: .08em; color: #F4B400; }
 .quote-card .who {
