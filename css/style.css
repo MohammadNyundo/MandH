@@ -23,6 +23,7 @@
   --sky-deep: #2F74C0;  /* sky for buttons/active text (readable with white) */
   --cloud: #F7FAFD;     /* summer-cloud white */
   --sky-mist: #E7F1FA;  /* very light sky, joins banners to cloud sections */
+  --cloud-base: #D8E6F3; /* shaded underside of a summer cloud */
 
   --header-h: 7rem;       /* tall bar at the top of the page: room for the stacked logo */
   --header-h-sm: 4.5rem;  /* slim bar once the visitor scrolls */
@@ -278,7 +279,7 @@ main { padding-top: var(--header-h); }
 /* Soft fade at the bottom of the hero into the story section */
 .site-header.overlay ~ main .hero::after {
   content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 5rem; z-index: 0; pointer-events: none;
-  background: linear-gradient(to bottom, rgba(231,241,250,0), var(--sky-mist));
+  background: linear-gradient(to bottom, rgba(247,250,253,0), var(--cloud));
 }
 
 /* Hero motion: the photo slowly settles into focus, then the Book Now button rises in.
@@ -298,7 +299,6 @@ main { padding-top: var(--header-h); }
 /* ---------- Home: our story (Margret) ---------- */
 .story {
   padding: 4.5rem 0 6rem;
-  background: linear-gradient(to bottom, var(--sky-mist) 0, var(--cloud) 22rem);
   color: var(--navy);
 }
 .story-wrap {
@@ -470,7 +470,6 @@ main { padding-top: var(--header-h); }
 /* ---------- Home: life at M&H (amenities) ----------
    A light "cloud" breather between the two navy sections, same palette as Our Story */
 .amenities {
-  background: linear-gradient(to bottom, var(--sky-mist), var(--cloud) 60%);
   color: var(--navy); padding: 6.5rem 0 7rem;
 }
 .amenities-wrap { width: 66rem; max-width: calc(100% - 3rem); margin: 0 auto; }
@@ -588,7 +587,7 @@ main { padding-top: var(--header-h); }
 .guests .read-more:hover > svg, .barfood .read-more:hover > svg { transform: translateX(3px); }
 
 /* ---------- Home: FAQ (one answer open at a time) ---------- */
-.faq { background: linear-gradient(to bottom, var(--sky-mist), var(--cloud)); color: var(--navy); padding: 6.5rem 0 7rem; }
+.faq { color: var(--navy); padding: 6.5rem 0 7rem; }
 .faq-wrap { width: 50rem; max-width: calc(100% - 3rem); margin: 0 auto; }
 .faq-head { text-align: center; margin-bottom: 3.5rem; }
 .faq-eyebrow {
@@ -1343,7 +1342,6 @@ main { padding-top: var(--header-h); }
    ABOUT — navy intro (shared with Food & Drinks) + Margret's story
    ========================================================= */
 .about-story {
-  background: linear-gradient(to bottom, var(--sky-mist) 0, var(--cloud) 22rem);
   color: var(--navy); padding: 5.5rem 0 6.5rem; scroll-margin-top: var(--header-h-sm);
 }
 .about-wrap {
@@ -1405,3 +1403,25 @@ main { padding-top: var(--header-h); }
   .about-text h3 { margin-top: 2.25rem; }
   .about-cta { display: flex; width: 100%; padding: 14px 24px; font-size: 15px; }
 }
+
+/* =========================================================
+   CLOUD SECTIONS (Our Story, Life at M&H, FAQ, About story)
+   Each light section is a cloud: sunlit white on top, shading to a cool blue-grey base where
+   it meets the deeper (navy) sky below. Faint, uneven patches of the base colour drift across
+   it, drawn with SVG fractal noise; each section has its own seed so no two skies repeat.
+   ========================================================= */
+.story, .amenities, .faq, .about-story {
+  position: relative; overflow: hidden; isolation: isolate;
+  background: linear-gradient(to bottom, var(--cloud) 0%, #EEF4FA 55%, var(--cloud-base) 100%);
+}
+.story::before, .amenities::before, .faq::before, .about-story::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background-repeat: repeat; background-size: 1400px 1000px;
+  /* patches fade out near the edges so the joins with the hero and navy sections stay clean */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 14%, #000 78%, transparent 100%);
+          mask-image: linear-gradient(to bottom, transparent 0, #000 14%, #000 78%, transparent 100%);
+}
+.story::before       { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1400' height='1000'%3E%3Cfilter id='c' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.0016 0.0034' numOctaves='4' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.847 0 0 0 0 0.902 0 0 0 0 0.953 0 0 0 4.8 -1.9'/%3E%3CfeGaussianBlur stdDeviation='6'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23c%29'/%3E%3C/svg%3E"); background-position: -180px 0; }
+.amenities::before   { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1400' height='1000'%3E%3Cfilter id='c' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.0019 0.0030' numOctaves='4' seed='29' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.847 0 0 0 0 0.902 0 0 0 0 0.953 0 0 0 4.8 -1.9'/%3E%3CfeGaussianBlur stdDeviation='6'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23c%29'/%3E%3C/svg%3E"); background-position: -520px -120px; }
+.faq::before         { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1400' height='1000'%3E%3Cfilter id='c' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.0014 0.0028' numOctaves='4' seed='47' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.847 0 0 0 0 0.902 0 0 0 0 0.953 0 0 0 4.8 -1.9'/%3E%3CfeGaussianBlur stdDeviation='6'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23c%29'/%3E%3C/svg%3E"); background-position: -60px -300px; }
+.about-story::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1400' height='1000'%3E%3Cfilter id='c' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.0017 0.0032' numOctaves='4' seed='83' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.847 0 0 0 0 0.902 0 0 0 0 0.953 0 0 0 4.8 -1.9'/%3E%3CfeGaussianBlur stdDeviation='6'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23c%29'/%3E%3C/svg%3E"); background-position: -340px -60px; }
