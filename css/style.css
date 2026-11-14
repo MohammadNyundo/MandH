@@ -1216,6 +1216,29 @@ main { padding-top: var(--header-h); }
   .hero > *:not(.bg-photo) { position: relative; }
   .hero .btn-cta { margin-top: auto; padding: 14px 36px; font-size: 15px; z-index: 1; }
 
+  /* Hero pan: a phone only fits about half of the wide photo, so the photo is sized to the
+     hero's height at its natural 4:3 width and drifts slowly left -> right -> left, letting
+     guests see the whole property (villa, pool, cottages, tree). Uses translate so it runs
+     on the GPU. min-width + cover keep it edge to edge on wide screens, where the pan is 0. */
+  .hero .bg-photo img {
+    left: 0 !important; top: 0 !important;
+    height: 100% !important; width: auto !important; min-width: 100%;
+    aspect-ratio: 4 / 3; object-fit: cover;
+    transform-origin: 0 50%;
+    animation: hero-pan 24s ease-in-out 1s infinite alternate both;
+    will-change: translate;
+  }
+  @keyframes hero-pan {
+    from { translate: 0 0; }
+    to   { translate: calc(100vw - 100%) 0; }
+  }
+}
+@media (max-width: 767px) and (prefers-reduced-motion: reduce) {
+  /* No motion: hold still, framed on the pool */
+  .hero .bg-photo img { animation: none; translate: calc((100vw - 100%) * .6) 0; }
+}
+@media (max-width: 767px) {
+
   .acc { padding: 3rem 1.25rem 3.5rem; }
   .acc-wrap { width: auto; }
   .acc-head { margin-bottom: 2rem; }
