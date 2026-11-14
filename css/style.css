@@ -668,8 +668,6 @@ main { padding-top: var(--header-h); }
 .svc-banner .bg-photo { opacity: .23; }
 .food-banner { height: 9.375rem; padding-top: 2.69rem; }
 .food-banner .bg-photo { opacity: .49; }
-.about-banner { height: 9.25rem; padding-top: 2.69rem; }
-.about-banner .bg-photo { opacity: .27; }
 
 .rows { padding: 4.25rem 0 6.8rem; }
 .row { display: flex; align-items: flex-start; padding-left: 7.125rem; }
@@ -696,11 +694,6 @@ main { padding-top: var(--header-h); }
 /* =========================================================
    ABOUT
    ========================================================= */
-.about { padding: 5.56rem 0 3.9rem; text-align: center; }
-.about h2 { font-family: var(--serif); font-size: 1.99rem; line-height: 2.44rem; text-transform: uppercase; }
-.about .lead { font-family: var(--dm); font-size: 1.333rem; line-height: 1.94rem; margin-top: -.25rem; }
-.about .body { width: 58.06rem; margin: 2.06rem auto 0; }
-.about .body p { font-size: 1.1375rem; line-height: 1.67rem; font-weight: 200; color: var(--light); }
 
 /* =========================================================
    BOOK NOW
@@ -1206,8 +1199,8 @@ main { padding-top: var(--header-h); }
 
   .abs { position: static; transform: none; top: auto !important; left: auto !important; right: auto !important; }
   .ph.abs { position: relative; }
-  .row p br, .room p br, .about .body p br { display: none; }
-  .row p + p, .about .body p + p { margin-top: .75rem; }
+  .row p br, .room p br { display: none; }
+  .row p + p { margin-top: .75rem; }
   .heading-xl { font-size: 2.6rem; line-height: 3rem; }
   .section { height: auto !important; }
 
@@ -1299,7 +1292,7 @@ main { padding-top: var(--header-h); }
   .room p { width: auto; font-size: 1rem; line-height: 1.55rem; }
   .room .btn-outline { margin: 1.5rem auto 0; width: 12rem; height: 3rem; font-size: .9rem; border-width: 3px; }
 
-  .svc-banner, .food-banner, .about-banner, .reviews-banner { height: auto; padding: 2rem 1rem; }
+  .svc-banner, .food-banner, .reviews-banner { height: auto; padding: 2rem 1rem; }
   .rows { padding: 2rem 1.25rem 2.5rem; }
   .row, .food .row { flex-direction: column; padding-left: 0; }
   .row + .row, .food .row:nth-child(2) { margin-top: 2rem; }
@@ -1311,11 +1304,6 @@ main { padding-top: var(--header-h); }
   .row p { font-size: .98rem; line-height: 1.5rem; }
   .food .btn-outline, .food .row:nth-child(2) .btn-outline { margin: 1.25rem auto 0; width: 12rem; height: 3rem; font-size: .9rem; border-width: 3px; }
 
-  .about { padding: 2.5rem 1.25rem; }
-  .about h2 { font-size: 1.5rem; line-height: 2rem; }
-  .about .lead { font-size: 1.05rem; line-height: 1.5rem; margin-top: .25rem; }
-  .about .body { width: auto; margin-top: 1.5rem; }
-  .about .body p { font-size: 1rem; line-height: 1.55rem; }
   .story { padding: 2.5rem 1.25rem 3rem; }
   .story-wrap { width: auto; grid-template-columns: 1fr; row-gap: 2rem; }
   .story-photo { order: 2; width: auto; margin: 0 -1.25rem; }
@@ -1348,4 +1336,71 @@ main { padding-top: var(--header-h); }
   .g3 { grid-auto-rows: 15rem; }
   .g-block .ph > img, .g-full .ph > img { left: 0 !important; top: 0 !important; width: 100% !important; height: 100% !important; object-fit: cover; }
   .g-full { height: 14rem !important; }
+}
+
+/* =========================================================
+   ABOUT — navy intro (shared with Food & Drinks) + Margret's story
+   ========================================================= */
+.about-story {
+  background: linear-gradient(to bottom, var(--sky-mist) 0, var(--cloud) 22rem);
+  color: var(--navy); padding: 5.5rem 0 6.5rem; scroll-margin-top: var(--header-h);
+}
+.about-wrap {
+  width: 66rem; max-width: calc(100% - 3rem); margin: 0 auto;
+  display: grid; grid-template-columns: 20rem 1fr; column-gap: 4.5rem; align-items: start;
+}
+/* The portrait stays in view while the story is read */
+.about-founder { margin: 0; position: sticky; top: calc(var(--header-h) + 2rem); }
+.about-founder img {
+  width: 100%; height: auto; aspect-ratio: 533 / 609; object-fit: cover; object-position: 50% 100%;
+  border-radius: 1rem; box-shadow: 0 18px 40px rgba(14,36,66,.18);
+}
+.about-founder figcaption {
+  margin-top: 1rem; font-family: var(--dm); font-size: clamp(13px, .9rem, 16px); line-height: 1.4; color: rgba(14,36,66,.7);
+}
+.about-founder figcaption strong { display: block; color: var(--navy); font-size: 1.1em; font-weight: 700; }
+
+.about-text { max-width: 40rem; }
+.about-eyebrow {
+  font-family: var(--dm); font-weight: 700; font-size: clamp(12px, .8rem, 14px);
+  letter-spacing: .18em; text-transform: uppercase; color: var(--sky-deep);
+}
+.about-text h2 { margin-top: .6rem; font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 2.75rem, 48px); line-height: 1.1; }
+.about-text h3 {
+  margin: 2.75rem 0 .9rem; font-family: var(--dm); font-weight: 700; font-size: clamp(13px, .85rem, 15px);
+  letter-spacing: .14em; text-transform: uppercase; color: var(--navy);
+  display: flex; align-items: center; gap: 1rem;
+}
+.about-text h3::after { content: ""; flex: 1; height: 1px; background: rgba(14,36,66,.14); }
+.about-text p {
+  text-wrap: pretty; font-size: clamp(16px, 1.1rem, 19px); line-height: 1.8; color: rgba(14,36,66,.85);
+}
+.about-text p + p { margin-top: 1rem; }
+.about-text .about-open {
+  margin-top: 1.75rem; font-family: var(--serif); font-size: clamp(20px, 1.6rem, 28px); line-height: 1.45; color: var(--navy);
+}
+.about-quote {
+  margin: 2rem 0; padding: .25rem 0 .25rem 1.5rem; border-left: 3px solid var(--sky);
+}
+.about-quote p {
+  font-family: var(--serif); font-style: italic; font-size: clamp(19px, 1.4rem, 25px); line-height: 1.5; color: var(--navy);
+}
+.about-text .about-close {
+  margin-top: 2.75rem; padding-top: 2rem; border-top: 1px solid rgba(14,36,66,.14);
+  font-family: var(--serif); font-size: clamp(19px, 1.35rem, 24px); line-height: 1.5; color: var(--navy);
+}
+.about-cta { margin-top: 2.25rem; }
+
+@media (max-width: 899px) {
+  .about-wrap { grid-template-columns: 1fr; row-gap: 2.5rem; }
+  .about-founder { position: static; max-width: 22rem; }
+}
+@media (max-width: 767px) {
+  .about-story { padding: 3.25rem 0 4rem; }
+  .about-wrap { max-width: calc(100% - 2.5rem); }
+  .about-founder { max-width: none; margin: 0 -1.25rem; }
+  .about-founder img { border-radius: 0; box-shadow: none; aspect-ratio: 4 / 5; }
+  .about-founder figcaption { padding: 0 1.25rem; }
+  .about-text h3 { margin-top: 2.25rem; }
+  .about-cta { display: flex; width: 100%; padding: 14px 24px; font-size: 15px; }
 }
