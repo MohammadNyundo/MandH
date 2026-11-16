@@ -176,6 +176,12 @@ main { padding-top: var(--header-h); }
   background: radial-gradient(ellipse 60% 70% at 50% 40%, #13305a 0%, rgba(14,36,66,0) 70%), var(--navy); }
 .footer-cta .cirrus--wisp { width: 42rem; right: -6rem; top: -2rem; opacity: .24; }
 .footer-cta .cirrus--streaks { width: 56rem; left: -16rem; bottom: -8rem; opacity: .16; transform: scaleX(-1) rotate(4deg); }
+/* Extra strands: Book direct is the densest sky on the page. Each strand keeps the same faint
+   opacity as the others, so the cover grows but no single cloud draws the eye. */
+.footer-cta .cirrus--x1 { width: 38rem; left: -10rem; top: -4rem; opacity: .2; transform: scaleX(-1) rotate(-3deg); }
+.footer-cta .cirrus--x2 { width: 50rem; right: -18rem; bottom: -6rem; opacity: .15; transform: rotate(-5deg); }
+.footer-cta .cirrus--x3 { width: 46rem; left: 22%; top: -6rem; opacity: .12; transform: scaleY(-1) rotate(2deg); }
+.footer-cta .cirrus--x4 { width: 30rem; right: 6%; top: 52%; opacity: .16; transform: rotate(6deg); }
 .footer-cta-inner { max-width: 40rem; margin: 0 auto; }
 .footer-cta-eyebrow {
   font-family: var(--dm); font-weight: 700; font-size: clamp(12px, .8rem, 14px);
@@ -1271,6 +1277,10 @@ main { padding-top: var(--header-h); }
   .footer-cta { padding: 4.5rem 1.25rem 4rem; }
   .footer-cta .cirrus--wisp { width: 26rem; right: -10rem; top: 0; }
   .footer-cta .cirrus--streaks { width: 34rem; left: -14rem; bottom: -2rem; }
+  .footer-cta .cirrus--x1 { width: 24rem; left: -9rem; top: -1rem; }
+  .footer-cta .cirrus--x2 { width: 30rem; right: -12rem; bottom: 0; }
+  .footer-cta .cirrus--x3 { width: 28rem; left: 10%; top: -3rem; }
+  .footer-cta .cirrus--x4 { width: 20rem; right: -4rem; top: 48%; }
   .footer-cta-btn { padding: 1rem 2.25rem; }
   .footer-main { grid-template-columns: 1fr; gap: 2.25rem; padding: 3rem 0 2.5rem; max-width: calc(100% - 2.5rem); }
   .footer-nav { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem 1.25rem; }
