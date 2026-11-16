@@ -23,7 +23,6 @@
   --sky-deep: #2F74C0;  /* sky for buttons/active text (readable with white) */
   --cloud: #F7FAFD;     /* summer-cloud white */
   --sky-mist: #E7F1FA;  /* very light sky, joins banners to cloud sections */
-  --cloud-base: #D8E6F3; /* shaded underside of a summer cloud */
 
   --header-h: 7rem;       /* tall bar at the top of the page: room for the stacked logo */
   --header-h-sm: 4.5rem;  /* slim bar once the visitor scrolls */
@@ -1406,22 +1405,33 @@ main { padding-top: var(--header-h); }
 
 /* =========================================================
    CLOUD SECTIONS (Our Story, Life at M&H, FAQ, About story)
-   Each light section is a cloud: sunlit white on top, shading to a cool blue-grey base where
-   it meets the deeper (navy) sky below. Faint, uneven patches of the base colour drift across
-   it, drawn with SVG fractal noise; each section has its own seed so no two skies repeat.
+   Each light section is a uniform layer of white cloud. Here and there it thins, and the clear
+   navy sky behind shows through very faintly: soft, uneven gaps drawn with SVG fractal noise.
+   Each section has its own seed so no two skies repeat. Strength: --sky-through.
    ========================================================= */
 .story, .amenities, .faq, .about-story {
   position: relative; overflow: hidden; isolation: isolate;
-  background: linear-gradient(to bottom, var(--cloud) 0%, #EEF4FA 55%, var(--cloud-base) 100%);
+  background: var(--cloud);
 }
 .story::before, .amenities::before, .faq::before, .about-story::before {
   content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background-image: var(--sky-patch);
   background-repeat: repeat; background-size: 1400px 1000px;
+  opacity: var(--sky-through, .09);   /* how much navy sky shows through the thin spots */
   /* patches fade out near the edges so the joins with the hero and navy sections stay clean */
   -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 14%, #000 78%, transparent 100%);
           mask-image: linear-gradient(to bottom, transparent 0, #000 14%, #000 78%, transparent 100%);
 }
-.story::before       { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1400' height='1000'%3E%3Cfilter id='c' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.0016 0.0034' numOctaves='4' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.847 0 0 0 0 0.902 0 0 0 0 0.953 0 0 0 4.8 -1.9'/%3E%3CfeGaussianBlur stdDeviation='6'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23c%29'/%3E%3C/svg%3E"); background-position: -180px 0; }
-.amenities::before   { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1400' height='1000'%3E%3Cfilter id='c' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.0019 0.0030' numOctaves='4' seed='29' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.847 0 0 0 0 0.902 0 0 0 0 0.953 0 0 0 4.8 -1.9'/%3E%3CfeGaussianBlur stdDeviation='6'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23c%29'/%3E%3C/svg%3E"); background-position: -520px -120px; }
-.faq::before         { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1400' height='1000'%3E%3Cfilter id='c' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.0014 0.0028' numOctaves='4' seed='47' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.847 0 0 0 0 0.902 0 0 0 0 0.953 0 0 0 4.8 -1.9'/%3E%3CfeGaussianBlur stdDeviation='6'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23c%29'/%3E%3C/svg%3E"); background-position: -60px -300px; }
-.about-story::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1400' height='1000'%3E%3Cfilter id='c' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.0017 0.0032' numOctaves='4' seed='83' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.847 0 0 0 0 0.902 0 0 0 0 0.953 0 0 0 4.8 -1.9'/%3E%3CfeGaussianBlur stdDeviation='6'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23c%29'/%3E%3C/svg%3E"); background-position: -340px -60px; }
+.story { --sky-patch: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1400' height='1000'%3E%3Cfilter id='c' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.0020 0.0036' numOctaves='3' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.075 0 0 0 0 0.208 0 0 0 0 0.392 0 0 0 5.2 -2.75'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23c%29'/%3E%3C/svg%3E"); }
+.story::before { background-position: -180px 0; }
+.amenities { --sky-patch: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1400' height='1000'%3E%3Cfilter id='c' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.0022 0.0034' numOctaves='3' seed='29' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.075 0 0 0 0 0.208 0 0 0 0 0.392 0 0 0 5.2 -2.75'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23c%29'/%3E%3C/svg%3E"); }
+.amenities::before { background-position: -520px -120px; }
+.faq { --sky-patch: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1400' height='1000'%3E%3Cfilter id='c' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.0018 0.0032' numOctaves='3' seed='47' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.075 0 0 0 0 0.208 0 0 0 0 0.392 0 0 0 5.2 -2.75'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23c%29'/%3E%3C/svg%3E"); }
+.faq::before { background-position: -60px -300px; }
+.about-story { --sky-patch: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1400' height='1000'%3E%3Cfilter id='c' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.0021 0.0035' numOctaves='3' seed='83' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.075 0 0 0 0 0.208 0 0 0 0 0.392 0 0 0 5.2 -2.75'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23c%29'/%3E%3C/svg%3E"); }
+.about-story::before { background-position: -340px -60px; }
+/* Phones: a phone only shows a 390px slice of the 1400px pattern, so draw it smaller to keep
+   several gaps on screen. */
+@media (max-width: 767px) {
+  .story::before, .amenities::before, .faq::before, .about-story::before { background-size: 760px 540px; }
+}
