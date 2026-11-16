@@ -1357,37 +1357,26 @@ main { padding-top: var(--header-h); }
 }
 
 /* =========================================================
-   ABOUT — navy intro (shared with Food & Drinks) + Margret's story
+   ABOUT: navy intro (shared with Food & Drinks), then Margret's story told as one
+   magazine-style column: the place and the founder, a full-width photo, then "your stay",
+   ending in the same "Reserve your spot" CTA as the home page.
    ========================================================= */
 .about-story {
-  color: var(--navy); padding: 5.5rem 0 6.5rem; scroll-margin-top: var(--header-h-sm);
+  color: var(--navy); padding: 5.5rem 0 5rem; scroll-margin-top: var(--header-h-sm);
 }
-.about-wrap {
-  width: 66rem; max-width: calc(100% - 3rem); margin: 0 auto;
-  display: grid; grid-template-columns: 20rem 1fr; column-gap: 4.5rem; align-items: start;
-}
-/* The portrait stays in view while the story is read */
-.about-founder { margin: 0; position: sticky; top: calc(var(--header-h-sm) + 2rem); }
-.about-founder img {
-  width: 100%; height: auto; aspect-ratio: 533 / 609; object-fit: cover; object-position: 50% 100%;
-  border-radius: 1rem; box-shadow: 0 18px 40px rgba(14,36,66,.18);
-}
-.about-founder figcaption {
-  margin-top: 1rem; font-family: var(--dm); font-size: clamp(13px, .9rem, 16px); line-height: 1.4; color: rgba(14,36,66,.7);
-}
-.about-founder figcaption strong { display: block; color: var(--navy); font-size: 1.1em; font-weight: 700; }
-
-.about-text { max-width: 40rem; }
+.about-story--stay { padding: 4.5rem 0 6rem; }
+.about-text { width: 40rem; max-width: calc(100% - 3rem); margin: 0 auto; }
 .about-eyebrow {
   font-family: var(--dm); font-weight: 700; font-size: clamp(12px, .8rem, 14px);
   letter-spacing: .18em; text-transform: uppercase; color: var(--sky-deep);
 }
-.about-text h2 { margin-top: .6rem; font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 2.75rem, 48px); line-height: 1.1; }
+.about-text h2 { margin-top: .6rem; font-family: var(--serif); font-weight: 400; font-size: clamp(32px, 3rem, 52px); line-height: 1.1; }
 .about-text h3 {
   margin: 2.75rem 0 .9rem; font-family: var(--dm); font-weight: 700; font-size: clamp(13px, .85rem, 15px);
   letter-spacing: .14em; text-transform: uppercase; color: var(--navy);
   display: flex; align-items: center; gap: 1rem;
 }
+.about-text h3:first-child { margin-top: 0; }
 .about-text h3::after { content: ""; flex: 1; height: 1px; background: rgba(14,36,66,.14); }
 .about-text p {
   text-wrap: pretty; font-size: clamp(16px, 1.1rem, 19px); line-height: 1.8; color: rgba(14,36,66,.85);
@@ -1406,20 +1395,25 @@ main { padding-top: var(--header-h); }
   margin-top: 2.75rem; padding-top: 2rem; border-top: 1px solid rgba(14,36,66,.14);
   font-family: var(--serif); font-size: clamp(19px, 1.35rem, 24px); line-height: 1.5; color: var(--navy);
 }
-.about-cta { margin-top: 2.25rem; }
 
-@media (max-width: 899px) {
-  .about-wrap { grid-template-columns: 1fr; row-gap: 2.5rem; }
-  .about-founder { position: static; max-width: 22rem; }
+/* The wide photo between "the founder" and "your stay": full width, cinematic crop */
+.about-photo { position: relative; margin: 0; background: var(--navy); }
+.about-photo img {
+  display: block; width: 100%; height: clamp(320px, 42vw, 640px);
+  object-fit: cover; object-position: 50% 62%;
 }
+.about-photo figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 3.5rem 1.5rem 1.25rem; text-align: center;
+  font-family: var(--dm); font-size: clamp(12px, .8rem, 14px); letter-spacing: .14em; text-transform: uppercase;
+  color: rgba(255,255,255,.92); background: linear-gradient(to bottom, rgba(14,36,66,0), rgba(14,36,66,.55));
+}
+
 @media (max-width: 767px) {
-  .about-story { padding: 3.25rem 0 4rem; }
-  .about-wrap { max-width: calc(100% - 2.5rem); }
-  .about-founder { max-width: none; margin: 0 -1.25rem; }
-  .about-founder img { border-radius: 0; box-shadow: none; aspect-ratio: 4 / 5; }
-  .about-founder figcaption { padding: 0 1.25rem; }
+  .about-story { padding: 3.25rem 0 3.5rem; }
+  .about-story--stay { padding: 3rem 0 4rem; }
+  .about-text { max-width: calc(100% - 2.5rem); }
   .about-text h3 { margin-top: 2.25rem; }
-  .about-cta { display: flex; width: 100%; padding: 14px 24px; font-size: 15px; }
+  .about-photo img { height: 300px; }
 }
 
 /* =========================================================
@@ -1450,6 +1444,7 @@ main { padding-top: var(--header-h); }
 .faq::before { background-position: -60px -300px; }
 .about-story { --sky-patch: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1400' height='1000'%3E%3Cfilter id='c' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.0008 0.0075' numOctaves='7' seed='83' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.075 0 0 0 0 0.208 0 0 0 0 0.392 0 0 0 7 -3.6'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='table' tableValues='0 .05 .4 .85 1'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23c%29'/%3E%3C/svg%3E"); }
 .about-story::before { background-position: -340px -60px; }
+.about-story--stay::before { background-position: -900px -520px; }
 /* Phones: a phone only shows a 390px slice of the 1400px pattern, so draw it smaller to keep
    several gaps on screen. */
 @media (max-width: 767px) {
