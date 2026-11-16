@@ -179,7 +179,7 @@ main { padding-top: var(--header-h); }
 /* Extra strands: Book direct is the densest sky on the page. Each strand keeps the same faint
    opacity as the others, so the cover grows but no single cloud draws the eye. */
 .footer-cta .cirrus--x1 { width: 38rem; left: -10rem; top: -4rem; opacity: .2; transform: scaleX(-1) rotate(-3deg); }
-.footer-cta .cirrus--x2 { width: 50rem; right: -18rem; bottom: -6rem; opacity: .15; transform: rotate(-5deg); }
+.footer-cta .cirrus--x2 { width: 50rem; left: auto; right: -18rem; bottom: -6rem; opacity: .15; transform: rotate(-5deg); }
 .footer-cta .cirrus--x3 { width: 46rem; left: 22%; top: -6rem; opacity: .12; transform: scaleY(-1) rotate(2deg); }
 .footer-cta .cirrus--x4 { width: 30rem; right: 6%; top: 52%; opacity: .16; transform: rotate(6deg); }
 .footer-cta-inner { max-width: 40rem; margin: 0 auto; }
@@ -389,16 +389,22 @@ main { padding-top: var(--header-h); }
 .cirrus { position: absolute; max-width: none; height: auto; user-select: none; }
 
 .acc { background: radial-gradient(ellipse 60% 50% at 22% 18%, #13305a 0%, rgba(14,36,66,0) 70%), radial-gradient(ellipse 55% 45% at 85% 90%, #112b50 0%, rgba(14,36,66,0) 70%), var(--navy); }
-.acc .cirrus--wisp { width: 46rem; left: -10rem; top: -1rem; opacity: .24; transform: scaleX(-1) rotate(3deg); }
-.acc .cirrus--streaks { width: 60rem; right: -16rem; bottom: -6rem; opacity: .16; transform: scaleX(-1) rotate(-3deg); }
+/* The cloud story down the home page: scattered strands here, thickening through Food & Drinks
+   and What our guests say to the densest sky in Book direct. Every strand keeps a faint opacity;
+   only the amount of cover grows. */
+.acc .cirrus--wisp { width: 34rem; left: -12rem; top: -1rem; opacity: .24; transform: scaleX(-1) rotate(3deg); }
+.acc .cirrus--streaks { width: 42rem; right: -18rem; bottom: -4rem; opacity: .16; transform: scaleX(-1) rotate(-3deg); }
 
 .barfood { background: radial-gradient(ellipse 55% 45% at 78% 12%, #13305a 0%, rgba(14,36,66,0) 70%), radial-gradient(ellipse 60% 45% at 15% 62%, #112b50 0%, rgba(14,36,66,0) 70%), var(--navy); }
 .barfood .cirrus--wisp { width: 40rem; right: -6rem; top: 0; opacity: .26; transform: rotate(-2deg); }
 .barfood .cirrus--streaks { width: 58rem; left: -18rem; top: 46%; opacity: .15; transform: rotate(-6deg); }
+.barfood .cirrus--x1 { width: 48rem; left: auto; right: -14rem; top: 72%; opacity: .14; transform: scaleX(-1) rotate(3deg); }
 
 .guests { background: radial-gradient(ellipse 70% 60% at 50% 45%, #13305a 0%, var(--navy) 70%); }
 .guests .cirrus--streaks { width: 62rem; left: -12rem; bottom: -4rem; opacity: .2; transform: rotate(-4deg); }
 .guests .cirrus--wisp { width: 44rem; right: -8rem; top: 1.5rem; opacity: .28; }
+.guests .cirrus--x1 { width: 36rem; left: -8rem; top: -2rem; opacity: .18; transform: scaleX(-1) rotate(-4deg); }
+.guests .cirrus--x2 { width: 52rem; left: auto; right: -16rem; bottom: -5rem; opacity: .13; transform: rotate(5deg); }
 
 /* Small uppercase tag above a dark-section heading (same style as "Book direct" / "Good to know") */
 .section-eyebrow {
@@ -1260,10 +1266,13 @@ main { padding-top: var(--header-h); }
   .quote-card { padding: 3.25rem 1.5rem 1.5rem; }
   .guests .cirrus--streaks { width: 38rem; left: -14rem; bottom: 2rem; }
   .guests .cirrus--wisp { width: 28rem; right: -10rem; top: 2rem; }
-  .acc .cirrus--wisp { width: 28rem; left: -10rem; top: 0; }
-  .acc .cirrus--streaks { width: 36rem; right: -14rem; bottom: 4rem; }
+  .guests .cirrus--x1 { width: 24rem; left: -9rem; top: 0; }
+  .guests .cirrus--x2 { width: 32rem; right: -13rem; bottom: 0; }
+  .acc .cirrus--wisp { width: 22rem; left: -9rem; top: 0; }
+  .acc .cirrus--streaks { width: 28rem; right: -13rem; bottom: 4rem; }
   .barfood .cirrus--wisp { width: 26rem; right: -9rem; top: 0; }
   .barfood .cirrus--streaks { width: 36rem; left: -15rem; top: 40%; }
+  .barfood .cirrus--x1 { width: 30rem; right: -12rem; top: 74%; }
   .quote-card::before { left: 1.4rem; }
   .trip-tags { right: 1.5rem; }
 
