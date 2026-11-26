@@ -1,0 +1,7 @@
+# M&H Boutique Hotel: every search engine and AI assistant is welcome.
+# That includes Googlebot, Bingbot, OAI-SearchBot / ChatGPT-User, Claude-SearchBot,
+# PerplexityBot and Applebot, so the hotel can be found, cited and recommended.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.mandhboutiquehotel.com/sitemap.xml

@@ -1,0 +1,30 @@
+# M&H Boutique Hotel
+
+> A quiet boutique hotel in Kinondo, just outside Diani Beach, Kwale County, Kenya. Studios and 1, 2 and 3 bedroom houses around a swimming pool, with a poolside bar and an all-day restaurant. Founded and run by Margret Mweya. Guests book direct on this website.
+
+## Key facts
+
+- Location: Kinondo ward, Diani, Kwale County, Kenya, near Green Garden Academy. GPS -4.3723307, 39.5253217
+- Directions: https://www.google.com/maps/dir/?api=1&destination=-4.3723307,39.5253217
+- Phone: +254 110 766 432
+- Email: mandhboutiquehotel@gmail.com
+- Rates per night (USD): Studio with breakfast $80 (up to 2 guests); 1 bedroom house $95; 2 bedroom house $125; 3 bedroom house $155
+- Breakfast is included with the studios. Each house has its own kitchen.
+- Free for guests: swimming pool, Wi-Fi, parking. Transport available on request.
+- Non-guests can swim for KSh 1,000, or free when spending KSh 5,000 at the bar.
+- The kitchen is open all day for breakfast, lunch and dinner. The bar serves drinks and cocktails on the terrace.
+- Activities arranged by reception: kite surfing, sailing, snorkelling, deep-sea fishing, golf (15 minutes away), safaris, and day trips to Wasini Island and Mombasa Old Town.
+
+## Pages
+
+- [Home](https://www.mandhboutiquehotel.com/): overview, amenities, guest reviews and FAQs
+- [Rooms & Rates](https://www.mandhboutiquehotel.com/accommodation): every studio and house with prices and direct booking
+- [Food & Drinks](https://www.mandhboutiquehotel.com/food-drinks): restaurant, bar and menu
+- [Our Story](https://www.mandhboutiquehotel.com/about-us): the hotel and its founder, Margret Mweya
+- [Gallery](https://www.mandhboutiquehotel.com/gallery): photos of the pool, villas, rooms and gardens
+
+## Elsewhere
+
+- Instagram: https://www.instagram.com/mandh_boutique_hotel/
+- TikTok: https://www.tiktok.com/@mandhboutiquehotel
+- Facebook: https://www.facebook.com/profile.php?id=61596350830116
